@@ -1,10 +1,6 @@
 {
-  "version": "G1.0.0-RC1.9",
-  "buildId": "20260918-RC1.9-BILINGUAL-QUICKBAR-MANUAL-1",
-  "channel": "general-test",
-  "stage": "bilingual-quickbar-manual-input-control-swap",
-  "model": "gemini-3.8-flash",
-  "stt": "google-chirp-3",
-  "tts": "azure-neural",
-  "updated": "2026-09-18"
+  "version": "G1.0.0-RC1.18",
+  "build": "20260918-RC1.18-TEST-GENERAL-REPO-1",
+  "notes": "TEST 전용 일반앱 저장소 배포본. laos-translator 테스트 본앱과만 왕복하며 남편/아내 ↔ K→L/L→K handoff를 유지. RC1.16 기능 및 RC1.14 업데이트 루프 수정 유지.",
+  "buildId": "20260918-RC1.18-TEST-GENERAL-REPO-1"
 }
