@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.18",
-  "build": "20260918-RC1.18-TEST-GENERAL-REPO-1",
-  "notes": "TEST 전용 일반앱 저장소 배포본. laos-translator 테스트 본앱과만 왕복하며 남편/아내 ↔ K→L/L→K handoff를 유지. RC1.16 기능 및 RC1.14 업데이트 루프 수정 유지.",
-  "buildId": "20260918-RC1.18-TEST-GENERAL-REPO-1"
+  "version": "G1.0.0-RC1.19",
+  "build": "20260918-RC1.19-TEST-STATE-ISOLATION-1",
+  "notes": "TEST 안정화: 일반앱 방향 세션 보존(handoff 최우선), TEST 전용 최근기록/자동통역/음성/네트워크 상태 키 분리, 자동업데이트 반복 reload 보호 추가. 번역/역번역/STT/TTS 핵심 로직은 RC1.18과 동일.",
+  "buildId": "20260918-RC1.19-TEST-STATE-ISOLATION-1"
 }
