@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>General Translator G1.0.0-RC1.9 Diagnostic</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Lao",sans-serif;color:#172033;background:#f6f8fc}
+*{box-sizing:border-box}body{margin:0;padding:20px}.wrap{max-width:820px;margin:0 auto}.card{background:#fff;border:1px solid #e1e6ef;border-radius:16px;padding:18px;box-shadow:0 4px 18px rgba(20,30,50,.05)}
+h1{font-size:1.35rem;margin:0 0 6px}.sub{color:#657087;font-size:.93rem;margin:0 0 16px}.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+button{border:0;border-radius:11px;padding:11px 14px;background:#3157d5;color:#fff;font-weight:750;cursor:pointer}button.secondary{background:#596579}button:disabled{opacity:.55;cursor:not-allowed}
+pre{margin:0;min-height:260px;white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f9fc;border:1px solid #e2e6ee;border-radius:12px;padding:14px;line-height:1.55;font-size:.88rem}
+.note{font-size:.84rem;color:#657087;margin-top:10px}.ok{color:#178344}.bad{color:#b42318}@media(max-width:520px){body{padding:12px}.card{padding:14px}button{flex:1 1 45%}}
+</style>
+</head>
+<body><div class="wrap"><div class="card">
+<h1>G1.0.0-RC1.9 진단</h1>
+<p class="sub">일반대화/여행 번역앱 전용 · 비밀값은 화면에 출력하지 않습니다.</p>
+<div class="row"><button id="selfBtn">자가검사 · ກວດຕົນເອງ</button><button id="relayBtn">Relay 확인 · ກວດ Relay</button><button id="geminiBtn">Gemini 직접 확인 · ກວດ Gemini</button><button id="allBtn" class="secondary">전체 확인 · ກວດທັງໝົດ</button></div>
+<pre id="out">대기</pre>
+<p class="note">이 진단기는 공통 1차 비밀번호와 공통 Relay 설정을 읽기만 합니다. 실서비스 데이터나 설정은 수정하지 않습니다. · ໜ້າກວດນີ້ອ່ານຄ່າເທົ່ານັ້ນ ແລະບໍ່ແກ້ໄຂຂໍ້ມູນບໍລິການ.</p>
+</div></div>
+<script>
+'use strict';
+const APP_VERSION='G1.0.0-RC1.9',BUILD_ID='20260918-RC1.9-BILINGUAL-QUICKBAR-MANUAL-1',MODEL='gemini-3.8-flash';
+const PRIMARY_PASSWORD_STORAGE='translator_primary_password';
+const SHARED_RELAY_URL='unified_google_stt_relay_url',SHARED_RELAY_TOKEN='unified_google_stt_relay_token';
+const LEGACY_RELAY_URL='unified_google_stt_relay_url_v296',LEGACY_RELAY_TOKEN='unified_google_stt_relay_token_v296';
+const NETWORK_ROUTE_MODE_KEY='korean_lao_general_network_mode_v1',AUTO_INTERPRETER_KEY='korean_lao_general_auto_interpreter_v1';
+const SESSION_API_KEY='general_gemini_api_key_v1',SESSION_RELAY_URL='general_stt_relay_url_v1',SESSION_RELAY_TOKEN='general_stt_app_token_v1';
+const SEOUL='https://lao-stt-relay-460077888071.asia-northeast3.run.app';
+const BANGKOK='https://lao-stt-relay-bkk-qliae2rhva-eu.a.run.app';
+const CLOUDFLARE='https://lao-voice-route-test.3547412.workers.dev';
+const out=document.getElementById('out');
+const ls=k=>{try{return localStorage.getItem(k)||''}catch(_){return''}};const ss=k=>{try{return sessionStorage.getItem(k)||''}catch(_){return''}};
+const clean=s=>String(s||'').trim().replace(/\/+$/,'');
+const apiKey=()=>ss(SESSION_API_KEY)||ls(PRIMARY_PASSWORD_STORAGE);
+const relayToken=()=>ss(SESSION_RELAY_TOKEN)||ls(SHARED_RELAY_TOKEN)||ls(LEGACY_RELAY_TOKEN);
+const customRelay=()=>clean(ss(SESSION_RELAY_URL)||ls(SHARED_RELAY_URL)||ls(LEGACY_RELAY_URL));
+const tz=()=>{try{return Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(_){return''}};
+function routes(){const first=/Vientiane|Bangkok/i.test(tz()),mode=String(ls(NETWORK_ROUTE_MODE_KEY)||'auto'),direct=first?[['bangkok',BANGKOK],['seoul',SEOUL]]:[['seoul',SEOUL],['bangkok',BANGKOK]],cf=['cloudflare',CLOUDFLARE];let rows=mode==='cloudflare'?[cf,...direct]:[...direct,cf];const c=customRelay();if(c&&!rows.some(x=>x[1]===c))rows.unshift(['custom',c]);return rows}
+function relayUrl(row,path){const u=new URL(row[1]+path);if(row[0]==='cloudflare')u.searchParams.set('region',/Vientiane|Bangkok/i.test(tz())?'bangkok':'seoul');return u.toString()}
+function render(lines){out.textContent=lines.join('\n')}
+function selfCheck(){const A=window.AudioContext||window.webkitAudioContext,lines=[];lines.push(`version=${APP_VERSION}`);lines.push(`build=${BUILD_ID}`);lines.push(`path=${location.pathname}`);lines.push(`timezone=${tz()||'UNKNOWN'}`);lines.push(`secureContext=${window.isSecureContext?'PASS':'FAIL'}`);lines.push(`fetch=${typeof fetch==='function'?'PASS':'FAIL'}`);lines.push(`WebSocket=${typeof WebSocket==='function'?'PASS':'FAIL'}`);lines.push(`AbortController=${typeof AbortController==='function'?'PASS':'FAIL'}`);lines.push(`mediaDevices=${navigator.mediaDevices?'PASS':'FAIL'}`);lines.push(`getUserMedia=${typeof navigator.mediaDevices?.getUserMedia==='function'?'PASS':'FAIL'}`);lines.push(`AudioContext=${A?'PASS':'FAIL'}`);lines.push(`localStorage=${(()=>{try{localStorage.setItem('__gdiag','1');localStorage.removeItem('__gdiag');return'PASS'}catch(_){return'FAIL'}})()}`);lines.push(`sessionStorage=${(()=>{try{sessionStorage.setItem('__gdiag','1');sessionStorage.removeItem('__gdiag');return'PASS'}catch(_){return'FAIL'}})()}`);lines.push(`commonPrimaryPassword=${ls(PRIMARY_PASSWORD_STORAGE)?'PRESENT':'MISSING'}`);lines.push(`generalSessionApiKey=${ss(SESSION_API_KEY)?'PRESENT':'EMPTY'}`);lines.push(`relayToken=${relayToken()?'PRESENT':'MISSING'}`);lines.push(`relayOverride=${customRelay()?'PRESENT':'DEFAULT'}`);lines.push(`networkMode=${ls(NETWORK_ROUTE_MODE_KEY)||'auto'}`);lines.push(`autoInterpreter=${ls(AUTO_INTERPRETER_KEY)==='1'?'ON':'OFF'}`);lines.push(`routeOrder=${routes().map(x=>x[0]).join(' > ')}`);lines.push('secretValues=HIDDEN');render(lines);return lines}
+async function fetchTimeout(url,opts={},ms=6500){const c=new AbortController(),t=setTimeout(()=>c.abort(),ms);try{return await fetch(url,{...opts,signal:c.signal,cache:'no-store'})}finally{clearTimeout(t)}}
+async function relayCheck(append=false){const lines=append?out.textContent.split('\n'):[];const tok=relayToken();if(!tok){lines.push('relay=MISSING_TOKEN');render(lines);return false}let last='';for(const r of routes()){try{const res=await fetchTimeout(relayUrl(r,'/health'),{headers:{Accept:'application/json','X-App-Token':tok}},6500);const body=(await res.text()).slice(0,220).replace(/\s+/g,' ');lines.push(`relay[${r[0]}]=HTTP_${res.status} ${body}`);render(lines);if(res.ok)return true;last=`HTTP_${res.status}`}catch(e){last=e?.name||'ERROR';lines.push(`relay[${r[0]}]=FAIL ${last}`);render(lines)}}lines.push(`relay=FAIL ${last}`);render(lines);return false}
+async function geminiCheck(append=false){const lines=append?out.textContent.split('\n'):[];const key=apiKey();if(!key){lines.push('geminiDirect=MISSING_KEY');render(lines);return false}const url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(MODEL)}:generateContent`;try{const res=await fetchTimeout(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key,Accept:'application/json'},body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply with exactly OK'}]}],generationConfig:{maxOutputTokens:64,thinkingConfig:{thinkingLevel:'low',includeThoughts:false}}})},9000);const data=await res.json().catch(()=>({}));const text=String(data?.candidates?.[0]?.content?.parts?.map(p=>p?.text||'').join('')||'').trim();lines.push(`geminiDirect=HTTP_${res.status} ${res.ok?(text||'EMPTY'):(data?.error?.status||data?.error?.message||'ERROR')}`);render(lines);return res.ok}catch(e){lines.push(`geminiDirect=FAIL ${e?.name||'Error'}: ${e?.message||e}`);render(lines);return false}}
+async function runAll(){selfCheck();out.textContent+='\n--- network ---';await relayCheck(true);await geminiCheck(true)}
+document.getElementById('selfBtn').onclick=selfCheck;document.getElementById('relayBtn').onclick=()=>{render(['Relay 확인 중...']);relayCheck(false)};document.getElementById('geminiBtn').onclick=()=>{render(['Gemini 직접 확인 중...']);geminiCheck(false)};document.getElementById('allBtn').onclick=runAll;
+</script></body></html>
