@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.23",
-  "build": "20260919-RC1.23-UI-FINAL-1",
-  "buildId": "20260919-RC1.23-UI-FINAL-1",
-  "notes": "TEST UI 최종 마감: 한국어/라오어 버튼 글자가 좁은 화면에서도 넘치지 않도록 상단/하단 버튼을 반응형으로 정리하고 가독성을 개선. RC1.22 기능 로직 유지."
+  "version": "G1.0.0-RC1.24",
+  "build": "20260920-RC1.24-UI-L10N-MANUAL-SYNC-TEST-1",
+  "buildId": "20260920-RC1.24-UI-L10N-MANUAL-SYNC-TEST-1",
+  "notes": "TEST UI/설명서 동기화. L→K 라오어 모드에서 남아 있던 한국어 언어명/자동통역/듣기 및 결과 액션 tooltip을 라오어로 완전 전환하고 TTS 상태 변경 후에도 speak 버튼 내부 span이 유지되도록 UI 갱신만 수정. 번역/역번역 프롬프트, STT/TTS 네트워크 로직, 저장/복사/업데이트/TEST 경로는 RC1.23과 동일."
 }
