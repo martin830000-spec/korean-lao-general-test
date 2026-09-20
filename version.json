@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.27",
-  "build": "20260920-RC1.27-MANUAL-RELEASE-FINAL-TEST-1",
-  "buildId": "20260920-RC1.27-MANUAL-RELEASE-FINAL-TEST-1",
-  "notes": "TEST 최종 마감: 설명서 문구/스크린샷 버전 중립화, 본앱과 공유하는 최초 1회 업데이트 안내, K→L/L→K 한국어·라오어 표시 및 상태보존 검증. 번역/역번역/STT/TTS/저장/복사/업데이트 코어는 변경하지 않음."
+  "version": "G1.0.0-RC1.28",
+  "build": "20260920-RC1.28-RETRANSLATE-SUITE-TEST-1",
+  "buildId": "20260920-RC1.28-RETRANSLATE-SUITE-TEST-1",
+  "notes": "TEST suite 동기화: 본앱 재번역 UI 복원 릴리스와 최초 1회 업데이트 안내/업데이트 내역을 공유하도록 버전·릴리스 메타만 갱신. 일반앱 번역/역번역/STT/TTS/저장/복사/업데이트 코어는 RC1.27과 동일."
 }
