@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.24",
-  "build": "20260920-RC1.24-UI-L10N-MANUAL-SYNC-TEST-1",
-  "buildId": "20260920-RC1.24-UI-L10N-MANUAL-SYNC-TEST-1",
-  "notes": "TEST UI/설명서 동기화. L→K 라오어 모드에서 남아 있던 한국어 언어명/자동통역/듣기 및 결과 액션 tooltip을 라오어로 완전 전환하고 TTS 상태 변경 후에도 speak 버튼 내부 span이 유지되도록 UI 갱신만 수정. 번역/역번역 프롬프트, STT/TTS 네트워크 로직, 저장/복사/업데이트/TEST 경로는 RC1.23과 동일."
+  "version": "G1.0.0-RC1.25",
+  "build": "20260920-RC1.25-MOBILE-HEADER-HOTFIX-TEST-1",
+  "buildId": "20260920-RC1.25-MOBILE-HEADER-HOTFIX-TEST-1",
+  "notes": "TEST 모바일 상단 헤더 겹침 핫픽스. 430px 이하에서 앱 제목/버전/설명과 설명서·처음·설정 버튼을 2단 배치해 텍스트 가림을 제거. RC1.24의 UI 언어전환/설명서 동기화 및 RC1.23 번역·역번역·STT/TTS·저장·복사·업데이트·TEST 경로 로직은 그대로 유지."
 }
