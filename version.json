@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.25",
-  "build": "20260920-RC1.25-MOBILE-HEADER-HOTFIX-TEST-1",
-  "buildId": "20260920-RC1.25-MOBILE-HEADER-HOTFIX-TEST-1",
-  "notes": "TEST 모바일 상단 헤더 겹침 핫픽스. 430px 이하에서 앱 제목/버전/설명과 설명서·처음·설정 버튼을 2단 배치해 텍스트 가림을 제거. RC1.24의 UI 언어전환/설명서 동기화 및 RC1.23 번역·역번역·STT/TTS·저장·복사·업데이트·TEST 경로 로직은 그대로 유지."
+  "version": "G1.0.0-RC1.26",
+  "build": "20260920-RC1.26-RELEASE-NOTES-PREVIEW-TEST-1",
+  "buildId": "20260920-RC1.26-RELEASE-NOTES-PREVIEW-TEST-1",
+  "notes": "TEST 업데이트 내역 UI 미리보기. 자세한 설명서에 업데이트 내역 버튼/화면을 추가하고 버전은 APP_VERSION에서 자동 표시. RC1.25 모바일 헤더 수정과 RC1.24 UI 언어전환, 번역/역번역/STT/TTS/저장/복사/업데이트/TEST 경로 로직은 변경하지 않음."
 }
