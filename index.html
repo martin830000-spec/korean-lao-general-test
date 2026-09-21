@@ -164,6 +164,18 @@ html[lang="lo"] .admin-mini{width:36px;min-width:36px;padding:0}
 #swapBtn,#micBtn,#autoInterpretBtn,#translateBtn,#largeBtn{display:none!important}
 .input-card>.actions{display:none!important}
 </style>
+
+<style id="v361122-keyboard-translate-ui">
+/* V3.61.122 TEST keyboard UX: one large translate control above Samsung/Galaxy software keyboard. */
+.keyboard-translate-panel{display:none;width:min(760px,100%);margin:0 auto}
+.keyboard-translate-btn{width:100%;min-height:54px;border:0;border-radius:13px;background:var(--accent);color:#fff;font-size:16px;font-weight:950;line-height:1.2;padding:11px 14px;box-shadow:0 5px 14px rgba(49,87,213,.22);touch-action:manipulation;cursor:pointer}
+.keyboard-translate-btn:active{transform:translateY(1px);background:var(--accent2)}
+body.mobile-keyboard-open{padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
+body.mobile-keyboard-open .general-mode-switch,body.mobile-keyboard-open .quickbar-inner{display:none!important}
+body.mobile-keyboard-open .keyboard-translate-panel{display:block}
+body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0px)}
+.input-clear-btn{min-height:44px}
+</style>
 </head>
 <body>
 <div class="app">
@@ -268,7 +280,7 @@ html[lang="lo"] .admin-mini{width:36px;min-width:36px;padding:0}
 <script>
 'use strict';
 const APP_VERSION='V3.61.122 TEST';
-const BUILD_ID='20260921-V3.61.122-TEST-GENERAL-UI-TTS-1';
+const BUILD_ID='20260921-V3.61.122-TEST-GENERAL-KEYBOARD-UX-2';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const SEOUL_RELAY='https://lao-stt-relay-460077888071.asia-northeast3.run.app';
@@ -521,6 +533,26 @@ state.history=readHistory().slice(0,50);state.autoSound=lsGet(AUTO_SOUND_KEY)!==
  function openGeneralUpdateHistory(lang){const lo=lang==='lo',ov=document.getElementById('generalUpdateHistoryOverlay'),kp=document.getElementById('generalUpdateHistoryKo'),lp=document.getElementById('generalUpdateHistoryLo'),cl=document.getElementById('generalUpdateHistoryClose');if(!ov)return;document.querySelectorAll('[data-general-release-version]').forEach(e=>e.textContent=APP_VERSION);if(kp)kp.hidden=lo;if(lp)lp.hidden=!lo;if(cl)cl.textContent=lo?'ຕົກລົງ':'확인';ov.setAttribute('aria-labelledby',lo?'generalUpdateHistoryTitleLo':'generalUpdateHistoryTitle');ov.hidden=false;const card=ov.querySelector('.general-release-history-card'),pane=lo?lp:kp,heading=pane?.querySelector('h2');if(card)card.scrollTop=0;if(heading){heading.setAttribute('tabindex','-1');setTimeout(()=>{heading.focus({preventScroll:true});if(card)card.scrollTop=0},20)}}
  function closeGeneralUpdateHistory(){const ov=document.getElementById('generalUpdateHistoryOverlay');if(ov)ov.hidden=true}
  document.querySelectorAll('[data-update-history-lang]').forEach(b=>b.addEventListener('click',()=>openGeneralUpdateHistory(b.dataset.updateHistoryLang||currentReleaseLang())));document.getElementById('generalUpdateHistoryClose')?.addEventListener('click',closeGeneralUpdateHistory);document.getElementById('generalReleaseNoticeClose')?.addEventListener('click',closeGeneralReleaseNotice);window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('generalUpdateHistoryOverlay')?.hidden)closeGeneralUpdateHistory();else if(e.key==='Escape'&&!document.getElementById('generalReleaseNoticeOverlay')?.hidden)closeGeneralReleaseNotice()});window.openGeneralUpdateHistory=openGeneralUpdateHistory;window.closeGeneralUpdateHistory=closeGeneralUpdateHistory;window.__showGeneralReleaseNotice=showGeneralReleaseNoticeOnce;window.__closeGeneralReleaseNotice=closeGeneralReleaseNotice;setTimeout(showGeneralReleaseNoticeOnce,900);
+})();
+</script>
+
+<script id="v361122-keyboard-translate-script">
+(function installKeyboardTranslateUi(){
+  if(window.__keyboardTranslateUiInstalled)return;window.__keyboardTranslateUiInstalled=true;
+  const input=document.getElementById('input'),bar=document.querySelector('.quickbar');if(!input||!bar)return;
+  const panel=document.createElement('div');panel.className='keyboard-translate-panel';panel.innerHTML='<button id="keyboardTranslateBtn" class="keyboard-translate-btn" type="button">➤ 번역하기</button>';bar.appendChild(panel);
+  const btn=panel.querySelector('#keyboardTranslateBtn');let baseline=Math.max(0,window.innerHeight||0,window.visualViewport?.height||0),lastPointer=0;
+  const focused=()=>document.activeElement===input;
+  function label(){const lao=typeof state!=='undefined'&&state.direction==='L2K';btn.textContent=lao?'➤ ແປ':'➤ 번역하기';btn.setAttribute('aria-label',lao?'ແປ':'번역하기')}
+  function metrics(){const vv=window.visualViewport;const layout=Math.max(Number(window.innerHeight)||0,Number(document.documentElement.clientHeight)||0);const visible=Number(vv?.height)||Number(window.innerHeight)||0;const offset=Number(vv?.offsetTop)||0;return{layout,visible,offset,inset:Math.max(0,Math.round(layout-visible-offset))}}
+  function updateBaseline(){if(focused())return;const m=metrics();const b=Math.max(m.layout,m.visible);if(b>baseline)baseline=b}
+  function sync(){updateBaseline();const m=metrics(),open=focused()&&baseline>0&&(baseline-m.visible)>=Math.max(110,Math.round(baseline*.16));document.body.classList.toggle('mobile-keyboard-open',open);document.documentElement.style.setProperty('--keyboard-lift',open?m.inset+'px':'0px');label()}
+  function refocus(){try{input.focus({preventScroll:true})}catch(_){try{input.focus()}catch(__){}}try{input.setSelectionRange(input.value.length,input.value.length)}catch(_){}}
+  function commit(){const source=String(input.value||'').trim();if(!source){refocus();setTimeout(sync,40);return}document.body.classList.remove('mobile-keyboard-open');try{dismissSoftKeyboard()}catch(_){try{input.blur()}catch(__){}}document.documentElement.style.setProperty('--keyboard-lift','0px');setTimeout(()=>{try{handleTranslateAction()}catch(e){console.error('[KEYBOARD TRANSLATE]',e)}},55)}
+  btn.addEventListener('pointerdown',e=>{lastPointer=Date.now();e.preventDefault();commit()});btn.addEventListener('click',e=>{e.preventDefault();if(Date.now()-lastPointer<500)return;commit()});
+  input.addEventListener('focus',()=>{setTimeout(sync,70);setTimeout(sync,260);setTimeout(sync,520)});input.addEventListener('blur',()=>setTimeout(sync,260));
+  window.visualViewport?.addEventListener('resize',sync,{passive:true});window.visualViewport?.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync,{passive:true});window.addEventListener('orientationchange',()=>setTimeout(()=>{baseline=0;updateBaseline();sync()},260),{passive:true});
+  document.getElementById('quickSwapBtn')?.addEventListener('click',()=>setTimeout(label,0));window.__keyboardTranslateUi={sync,commit,isOpen:()=>document.body.classList.contains('mobile-keyboard-open')};label();sync();
 })();
 </script>
 </body>

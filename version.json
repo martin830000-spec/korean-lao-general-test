@@ -1,6 +1,6 @@
 {
   "version": "V3.61.122 TEST",
-  "build": "20260921-V3.61.122-TEST-GENERAL-UI-TTS-1",
-  "buildId": "20260921-V3.61.122-TEST-GENERAL-UI-TTS-1",
-  "notes": "TEST 전용 UI/TTS 패치. 본문 중복 퀵액션을 정리하고 자동 음성 출력 토글과 수동 TTS 듣기를 분리. 자동통역은 STT→번역→TTS 흐름 유지. 프롬프트·네트워크 코어는 SERVICE RC1.31 기준 보존."
+  "build": "20260921-V3.61.122-TEST-GENERAL-KEYBOARD-UX-2",
+  "buildId": "20260921-V3.61.122-TEST-GENERAL-KEYBOARD-UX-2",
+  "notes": "TEST UI 입력흐름 패치. 빈 입력 번역은 입력창 포커스, 소프트키보드가 열린 동안 하단바는 번역하기 단일 버튼으로 전환, 번역 실행 시 키보드 자동 닫힘 후 기존 하단바 복귀. SERVICE RC1.31 번역/STT/TTS/프롬프트/네트워크 코어 보존."
 }
