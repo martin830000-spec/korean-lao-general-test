@@ -1,6 +1,6 @@
 {
-  "version": "G1.0.0-RC1.28",
-  "build": "20260920-RC1.28-RETRANSLATE-SUITE-TEST-1",
-  "buildId": "20260920-RC1.28-RETRANSLATE-SUITE-TEST-1",
-  "notes": "TEST suite 동기화: 본앱 재번역 UI 복원 릴리스와 최초 1회 업데이트 안내/업데이트 내역을 공유하도록 버전·릴리스 메타만 갱신. 일반앱 번역/역번역/STT/TTS/저장/복사/업데이트 코어는 RC1.27과 동일."
+  "version": "V3.61.122 TEST",
+  "build": "20260921-V3.61.122-TEST-GENERAL-UI-TTS-1",
+  "buildId": "20260921-V3.61.122-TEST-GENERAL-UI-TTS-1",
+  "notes": "TEST 전용 UI/TTS 패치. 본문 중복 퀵액션을 정리하고 자동 음성 출력 토글과 수동 TTS 듣기를 분리. 자동통역은 STT→번역→TTS 흐름 유지. 프롬프트·네트워크 코어는 SERVICE RC1.31 기준 보존."
 }
