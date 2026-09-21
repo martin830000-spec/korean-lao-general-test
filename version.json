@@ -1,6 +1,6 @@
 {
   "version": "V3.61.122 TEST",
-  "build": "20260921-V3.61.122-TEST-GENERAL-KEYBOARD-UX-2",
-  "buildId": "20260921-V3.61.122-TEST-GENERAL-KEYBOARD-UX-2",
-  "notes": "TEST UI 입력흐름 패치. 빈 입력 번역은 입력창 포커스, 소프트키보드가 열린 동안 하단바는 번역하기 단일 버튼으로 전환, 번역 실행 시 키보드 자동 닫힘 후 기존 하단바 복귀. SERVICE RC1.31 번역/STT/TTS/프롬프트/네트워크 코어 보존."
+  "build": "20260921-V3.61.122-TEST-GENERAL-UI-LANG-UX5",
+  "buildId": "20260921-V3.61.122-TEST-GENERAL-UI-LANG-UX5",
+  "notes": "TEST UI 정리. 메인 타이틀에 현재 번역 방향 표시, 기존 상단 방향 카드는 숨김(하단 언어전환 유지), 상단 버튼/타이틀 글자 폭 자동 맞춤 및 터치영역 보강. 기존 번역/STT/TTS/프롬프트/네트워크 코어 보존."
 }
