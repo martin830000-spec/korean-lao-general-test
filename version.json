@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.123 TEST",
-  "build": "20260921-V3.61.123-TEST-GENERAL-RESUME-PROMPT-UX7",
-  "buildId": "20260921-V3.61.123-TEST-GENERAL-RESUME-PROMPT-UX7",
-  "notes": "TEST UX7. 본앱↔일반앱 전환/페이지 복귀 시 일반앱 자동통역·자동음성 저장 상태를 pageshow/visibility에서 재동기화. 기존 일반앱 번역 프롬프트, TTS One-Tap, STT, UI Language UX5, 네트워크 코어 보존."
+  "version": "V3.61.134 TEST",
+  "build": "20260922-V3.61.134-TEST-GENERAL-MULTILANG-M1",
+  "buildId": "20260922-V3.61.134-TEST-GENERAL-MULTILANG-M1",
+  "notes": "Multilingual TEST M1. Husband: Korean fixed; wife: Lao fixed. Partner language selectable among Lao/Korean, English, Simplified Chinese, Japanese, Thai. Pair-aware translation/back-translation/STT/TTS/history. SERVICE untouched."
 }
