@@ -239,7 +239,7 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 <body>
 <div class="app">
   <div class="topbar">
-    <div class="brand"><div class="logo">🌏</div><div class="title-wrap"><div class="title" id="appTitle">🇰🇷 한국어 → 🇱🇦 라오어 일반 통역</div><div class="version-text" id="versionText">V3.61.134 TEST</div><div class="subtitle" id="appSubtitle">여행·일상 대화를 자연스럽게 통역합니다</div></div></div>
+    <div class="brand"><div class="logo">🌏</div><div class="title-wrap"><div class="title" id="appTitle">🇰🇷 한국어 → 🇱🇦 라오어 일반 통역</div><div class="version-text" id="versionText">V3.61.135 TEST</div><div class="subtitle" id="appSubtitle">여행·일상 대화를 자연스럽게 통역합니다</div></div></div>
     <div class="top-actions"><button class="icon-btn nav-btn manual-top-btn" id="manualBtn" title="자세한 설명서">📖<span class="text-icon" id="manualBtnText"> 자세한 설명서</span></button><button class="icon-btn home-mini" id="homeBtn" type="button" title="처음으로" aria-label="처음으로">🏠<span class="text-icon" id="homeBtnText"> 처음</span></button><button class="icon-btn admin-mini" id="adminBtn" type="button" title="관리자 도구" aria-label="관리자 도구">⚙️</button></div>
   </div>
   <div class="top-audio-toolbar" aria-label="음성 출력 제어">
@@ -303,7 +303,7 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 <div class="fullscreen" id="fullscreen" role="dialog" aria-modal="true"><button class="fs-close" id="fsClose" aria-label="닫기">×</button><div class="fs-text" id="fsText"></div></div>
 <div class="manual-overlay" id="manualModal" role="dialog" aria-modal="true" aria-labelledby="manualTitle" hidden>
   <div class="manual-sheet">
-    <div class="manual-head"><div><div class="manual-kicker" id="manualKicker">통역앱</div><h2 id="manualTitle">통역앱 자세한 설명서</h2><div class="manual-version" id="manualVersion">V3.61.134 TEST</div></div><button class="manual-close" id="manualClose" type="button" aria-label="설명서 닫기">×</button></div>
+    <div class="manual-head"><div><div class="manual-kicker" id="manualKicker">통역앱</div><h2 id="manualTitle">통역앱 자세한 설명서</h2><div class="manual-version" id="manualVersion">V3.61.135 TEST</div></div><button class="manual-close" id="manualClose" type="button" aria-label="설명서 닫기">×</button></div>
     <div class="manual-scroll">
       <div class="manual-lang-tabs" role="tablist" aria-label="설명서 언어"><button class="manual-lang-tab active" id="manualKoTab" type="button" role="tab" aria-selected="true">한국어 설명</button><button class="manual-lang-tab" id="manualLoTab" type="button" role="tab" aria-selected="false">ຄຳອະທິບາຍພາສາລາວ</button></div>
       <div class="manual-lang-panel" id="manualKoPanel" lang="ko">
@@ -353,8 +353,8 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 <div class="update-toast" id="updateToast">새 버전을 확인했습니다. 현재 작업이 끝나면 자동으로 적용합니다.</div>
 <script>
 'use strict';
-const APP_VERSION='V3.61.134 TEST';
-const BUILD_ID='20260922-V3.61.134-TEST-GENERAL-MULTILANG-M1';
+const APP_VERSION='V3.61.135 TEST';
+const BUILD_ID='20260922-V3.61.135-TEST-GENERAL-MULTILANG-M2-TTS';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const SEOUL_RELAY='https://lao-stt-relay-460077888071.asia-northeast3.run.app';
@@ -650,8 +650,8 @@ state.history=readHistory().slice(0,50);syncPersistentToggleStateFromStorage();r
 (function(){
  const RELEASE_DATA=Object.freeze({
   version:APP_VERSION,id:'test-multilang-v361134-m1',seenKey:'translator_release_notice_seen_test_multilang_v1',
-  ko:{sub:'V3.61.134 TEST는 일반 통역앱의 다국어 구조를 처음 시험하는 빌드입니다.',summary:['남편 모드는 한국어, 아내 모드는 라오어를 자기 언어로 고정하고 상대 언어만 선택합니다.','영어·중국어(간체)·일본어·태국어를 선택하고 언어전환으로 말하는 방향을 바꿀 수 있습니다.'],sections:[['다국어 선택',['남편: 한국어 ↔ 라오어/영어/중국어/일본어/태국어','아내: 라오어 ↔ 한국어/영어/중국어/일본어/태국어']],['음성·의미확인',['STT는 현재 말하는 언어, TTS는 번역 결과 언어를 따라갑니다.','의미확인은 현재 원문 언어로 다시 번역해 비교합니다.']],['TEST 분리',['SERVICE V3.61.133은 변경하지 않았습니다.','한국어↔라오어 기존 번역 프롬프트는 그대로 유지합니다.']]],previous:'TEST M1: 다국어 일반 통역 구조 첫 검증 빌드.'},
-  lo:{sub:'V3.61.134 TEST ເປັນບິວທົດລອງທຳອິດສຳລັບລ່າມຫຼາຍພາສາ.',summary:['ໂໝດຜົວລັອກພາສາເກົາຫຼີ ແລະ ໂໝດພັນລະຍາລັອກພາສາລາວ; ເລືອກສະເພາະພາສາຂອງຄູ່ສົນທະນາ.','ສາມາດເລືອກ ອັງກິດ, ຈີນ(ຕົວຫຍໍ້), ຍີ່ປຸ່ນ, ໄທ ແລະ ກົດສະຫຼັບພາສາເພື່ອກັບທິດ.'],sections:[['ການເລືອກພາສາ',['ຜົວ: ເກົາຫຼີ ↔ ລາວ/ອັງກິດ/ຈີນ/ຍີ່ປຸ່ນ/ໄທ','ພັນລະຍາ: ລາວ ↔ ເກົາຫຼີ/ອັງກິດ/ຈີນ/ຍີ່ປຸ່ນ/ໄທ']],['ສຽງ ແລະ ກວດຄວາມໝາຍ',['STT ຕາມພາສາທີ່ກຳລັງເວົ້າ; TTS ຕາມພາສາຜົນແປ.','ກວດຄວາມໝາຍໂດຍແປກັບໄປພາສາຕົ້ນສະບັບ.']],['ແຍກຈາກ SERVICE',['SERVICE V3.61.133 ບໍ່ຖືກປ່ຽນ.','prompt ເກົາຫຼີ↔ລາວ ເດີມຍັງຄົງໄວ້.']]],previous:'TEST M1: ບິວທົດລອງທຳອິດຂອງລ່າມຫຼາຍພາສາ.'}
+  ko:{sub:'V3.61.135 TEST는 일반 통역앱의 다국어 구조를 처음 시험하는 빌드입니다.',summary:['남편 모드는 한국어, 아내 모드는 라오어를 자기 언어로 고정하고 상대 언어만 선택합니다.','영어·중국어(간체)·일본어·태국어를 선택하고 언어전환으로 말하는 방향을 바꿀 수 있습니다.'],sections:[['다국어 선택',['남편: 한국어 ↔ 라오어/영어/중국어/일본어/태국어','아내: 라오어 ↔ 한국어/영어/중국어/일본어/태국어']],['음성·의미확인',['STT는 현재 말하는 언어, TTS는 번역 결과 언어를 따라갑니다.','의미확인은 현재 원문 언어로 다시 번역해 비교합니다.']],['TEST 분리',['SERVICE V3.61.133은 변경하지 않았습니다.','한국어↔라오어 기존 번역 프롬프트는 그대로 유지합니다.']]],previous:'TEST M1: 다국어 일반 통역 구조 첫 검증 빌드.'},
+  lo:{sub:'V3.61.135 TEST ເປັນບິວທົດລອງທຳອິດສຳລັບລ່າມຫຼາຍພາສາ.',summary:['ໂໝດຜົວລັອກພາສາເກົາຫຼີ ແລະ ໂໝດພັນລະຍາລັອກພາສາລາວ; ເລືອກສະເພາະພາສາຂອງຄູ່ສົນທະນາ.','ສາມາດເລືອກ ອັງກິດ, ຈີນ(ຕົວຫຍໍ້), ຍີ່ປຸ່ນ, ໄທ ແລະ ກົດສະຫຼັບພາສາເພື່ອກັບທິດ.'],sections:[['ການເລືອກພາສາ',['ຜົວ: ເກົາຫຼີ ↔ ລາວ/ອັງກິດ/ຈີນ/ຍີ່ປຸ່ນ/ໄທ','ພັນລະຍາ: ລາວ ↔ ເກົາຫຼີ/ອັງກິດ/ຈີນ/ຍີ່ປຸ່ນ/ໄທ']],['ສຽງ ແລະ ກວດຄວາມໝາຍ',['STT ຕາມພາສາທີ່ກຳລັງເວົ້າ; TTS ຕາມພາສາຜົນແປ.','ກວດຄວາມໝາຍໂດຍແປກັບໄປພາສາຕົ້ນສະບັບ.']],['ແຍກຈາກ SERVICE',['SERVICE V3.61.133 ບໍ່ຖືກປ່ຽນ.','prompt ເກົາຫຼີ↔ລາວ ເດີມຍັງຄົງໄວ້.']]],previous:'TEST M1: ບິວທົດລອງທຳອິດຂອງລ່າມຫຼາຍພາສາ.'}
  });
  function safeGet(k){try{return localStorage.getItem(k)}catch(_){return null}} function safeSet(k,v){try{localStorage.setItem(k,v)}catch(_){} }
  function esc(s){return String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}

@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.134 TEST",
-  "build": "20260922-V3.61.134-TEST-GENERAL-MULTILANG-M1",
-  "buildId": "20260922-V3.61.134-TEST-GENERAL-MULTILANG-M1",
-  "notes": "Multilingual TEST M1. Husband: Korean fixed; wife: Lao fixed. Partner language selectable among Lao/Korean, English, Simplified Chinese, Japanese, Thai. Pair-aware translation/back-translation/STT/TTS/history. SERVICE untouched."
+  "version": "V3.61.135 TEST",
+  "build": "20260922-V3.61.135-TEST-GENERAL-MULTILANG-M2-TTS",
+  "buildId": "20260922-V3.61.135-TEST-GENERAL-MULTILANG-M2-TTS",
+  "notes": "Multilingual TEST M2. Client translation/STT/TTS mapping is unchanged from V3.61.134 M1. Requires Cloud Run 3.7.15 multilingual Azure TTS allowlist for en-US, zh-CN, ja-JP, th-TH. SERVICE client untouched."
 }
