@@ -308,7 +308,7 @@ body.unified-booting .shell,body.unified-booting #authScreen{visibility:hidden}
   </div>
   <div class="stage"><iframe id="generalFrame" class="mode-frame active" title="일상 다국어 통역" allow="microphone; autoplay; clipboard-write" data-loaded="0"></iframe><div id="loadingMask" class="loading-mask show">통역기를 여는 중...</div></div>
 </div>
-<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="317c5c50d1f6d6dd5b3bf66c955c88ce56d3f539ae0b09a402f3829274e85bab">&lt;!doctype html&gt;
+<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="8433edd05a4ad6769e4726662c6f9f881d00bc6da985068f4f514febba800f1f">&lt;!doctype html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
@@ -700,6 +700,7 @@ body{padding-top:9px!important}
 .general-title-block .title-wrap{min-width:0!important;overflow:hidden!important}
 .general-title-block .title,.general-title-block .subtitle{overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
 .title-language-pill{display:block!important;position:static!important;visibility:visible!important;width:auto!important;min-width:88px!important;max-width:132px!important;min-height:32px!important;height:32px!important;margin:0!important;padding:3px 24px 3px 9px!important;border:1px solid #cbd8ea!important;border-radius:999px!important;background-color:#fff!important;color:#263248!important;font-size:11px!important;font-weight:850!important;line-height:1.1!important;white-space:nowrap!important;text-overflow:ellipsis!important;overflow:hidden!important;box-shadow:0 2px 7px rgba(30,55,110,.06)!important}
+.title-language-control{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:6px!important;min-width:0!important;white-space:nowrap!important}.title-language-label{display:inline-flex!important;align-items:center!important;flex:0 1 auto!important;min-width:0!important;color:#5b6678!important;font-size:11.5px!important;font-weight:800!important;line-height:1.1!important;white-space:nowrap!important}
 .multilang-compat{display:none!important}
 /* Primary translation → back translation → source: sentence typography is intentionally identical. */
 body.result-focus .output-card.ui-combined-result .output,
@@ -711,11 +712,14 @@ body.result-focus .output-card.ui-combined-result .output{justify-content:flex-s
   .general-title-block .title{font-size:15.5px!important}
   .general-title-block .subtitle{font-size:9.5px!important}
   .title-language-pill{min-width:80px!important;max-width:112px!important;height:30px!important;min-height:30px!important;font-size:10.5px!important;padding-left:8px!important;padding-right:22px!important}
+  .title-language-control{gap:5px!important}
+  .title-language-label{font-size:10.5px!important}
 }
 @media(max-width:375px){
   .general-title-block .title{font-size:14.5px!important}
   .general-title-block .subtitle{font-size:9px!important}
   .title-language-pill{min-width:76px!important;max-width:102px!important;font-size:10px!important;padding-left:7px!important;padding-right:20px!important}
+  .title-language-label{font-size:10px!important}
   body.result-focus .output-card.ui-combined-result .output,
   body.result-focus .output-card.ui-combined-result .verify-body,
   body.result-focus .output-card.ui-combined-result .ui-source-preview-text{font-size:14.5px!important}
@@ -723,7 +727,10 @@ body.result-focus .output-card.ui-combined-result .output{justify-content:flex-s
 @media(max-width:340px){
   .general-title-block .subtitle{display:none!important}
   .title-language-pill{min-width:72px!important;max-width:94px!important;font-size:9.5px!important}
+  .title-language-control{gap:4px!important}
+  .title-language-label{font-size:9.5px!important}
 }
+@media(max-width:330px){.title-language-label{display:none!important}}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -733,7 +740,7 @@ body.result-focus .output-card.ui-combined-result .output{justify-content:flex-s
     &lt;div class="general-mode-buttons"&gt;&lt;button class="general-mode-btn active" id="generalHusbandModeBtn" type="button" aria-pressed="true"&gt;&lt;span id="generalHusbandModeLabel"&gt;🇰🇷 한국&lt;/span&gt;&lt;/button&gt;&lt;button class="general-mode-btn" id="generalWifeModeBtn" type="button" aria-pressed="false"&gt;&lt;span id="generalWifeModeLabel"&gt;🇱🇦 ລາວ&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
     &lt;div class="general-shell-right-tools"&gt;&lt;button class="general-shell-home" id="homeBtn" type="button" title="처음으로" aria-label="처음으로"&gt;&lt;span class="general-shell-home-icon"&gt;🏠&lt;/span&gt;&lt;span class="general-shell-home-label" id="homeBtnText"&gt;처음&lt;/span&gt;&lt;/button&gt;&lt;button class="general-shell-admin-gear" id="adminBtn" type="button" title="관리자 도구" aria-label="관리자 도구"&gt;⚙️&lt;/button&gt;&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class="general-title-block"&gt;&lt;div class="title-wrap"&gt;&lt;div class="title" id="appTitle"&gt;🌏 일상 다국어 통역&lt;/div&gt;&lt;div class="subtitle" id="appSubtitle"&gt;여행·일상 대화를 자연스럽게 통역합니다&lt;/div&gt;&lt;/div&gt;&lt;select class="multilang-select title-language-pill" id="partnerLangSelect" aria-label="상대 언어 선택"&gt;&lt;/select&gt;&lt;/div&gt;
+  &lt;div class="general-title-block"&gt;&lt;div class="title-wrap"&gt;&lt;div class="title" id="appTitle"&gt;🌏 일상 다국어 통역&lt;/div&gt;&lt;div class="subtitle" id="appSubtitle"&gt;여행·일상 대화를 자연스럽게 통역합니다&lt;/div&gt;&lt;/div&gt;&lt;div class="title-language-control"&gt;&lt;span class="title-language-label" id="titleLanguageLabel"&gt;🌐 통역 언어&lt;/span&gt;&lt;select class="multilang-select title-language-pill" id="partnerLangSelect" aria-label="통역 언어 선택"&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div class="top-audio-toolbar" aria-label="음성 출력 제어"&gt;
     &lt;button class="btn success" id="bodySoundToggleBtn" type="button" title="자동 음성 출력"&gt;🔊 자동음성 켜짐&lt;/button&gt;
     &lt;button class="btn" id="speakBtn" title="듣기" disabled aria-disabled="true"&gt;&lt;span class="act-icon"&gt;🔊&lt;/span&gt;&lt;span id="speakBtnText"&gt;듣기&lt;/span&gt;&lt;/button&gt;
@@ -971,6 +978,7 @@ function applyUiLanguage(){
  const lo=uiLang()==='lo'; document.documentElement.lang=lo?'lo':'ko';
  setTxt('appTitle','🌏 일상 다국어 통역','🌏 ລ່າມຫຼາຍພາສາປະຈຳວັນ');
  setTxt('appSubtitle','여행·일상 대화를 자연스럽게 통역합니다','ແປການສົນທະນາທ່ອງທ່ຽວ ແລະ ປະຈຳວັນໃຫ້ເປັນທຳມະຊາດ');
+ setTxt('titleLanguageLabel','🌐 통역 언어','🌐 ພາສາແປ'); const pls=$('partnerLangSelect'); if(pls)pls.setAttribute('aria-label',uiT('통역 언어 선택','ເລືອກພາສາແປ'));
  setTxt('manualBtnText','자세한 설명서','ຄູ່ມືລະອຽດ'); setTxt('homeBtnText','처음','ໜ້າທຳອິດ'); setTxt('generalHusbandModeLabel','🇰🇷 한국','🇰🇷 ເກົາຫຼີ'); setTxt('generalWifeModeLabel','🇱🇦 라오스','🇱🇦 ລາວ'); setTxt('manualKicker','통역앱','ແອັບລ່າມ'); setTxt('coupleAppBtnText','부부대화','ສົນທະນາຄູ່ສົມລົດ'); setTxt('generalAppCurrentText','일반 통역','ລ່າມທົ່ວໄປ'); setTxt('manualTitle','통역앱 자세한 설명서','ຄູ່ມືແອັບລ່າມ'); $('manualClose')?.setAttribute('aria-label',uiT('설명서 닫기','ປິດຄູ່ມື'));
  setTxt('srcRole','말하는 언어','ພາສາທີ່ເວົ້າ'); setTxt('dstRole','보여줄 언어','ພາສາທີ່ຈະສະແດງ');
  setTxt('directionTip','화자 성별·나이·관계는 원문에 있을 때만 반영합니다.','ຈະລະບຸເພດ ອາຍຸ ຫຼື ຄວາມສຳພັນ ເມື່ອຕົ້ນສະບັບລະບຸເທົ່ານັ້ນ.');
