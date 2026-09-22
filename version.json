@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.138 TEST",
-  "build": "20260922-V3.61.138-TEST-GENERAL-SHELL-REBUILD-R1",
-  "buildId": "20260922-V3.61.138-TEST-GENERAL-SHELL-REBUILD-R1",
-  "notes": "General-app TEST rebuild R1. Current general-app UI/UX/features are preserved as one iframe payload, while the visible top shell now uses the same shell/stage/iframe topology and CSS rules as the couple-app TEST. Husband/wife UI modes remain general-app modes; navigation/update handoff is parent-aware. Couple-app TEST and Cloud Run 3.7.17 are unchanged."
+  "version": "V3.61.139 TEST",
+  "build": "20260922-V3.61.139-TEST-UI-POLISH-FINAL",
+  "buildId": "20260922-V3.61.139-TEST-UI-POLISH-FINAL",
+  "notes": "V3.61.138 GENERAL REBUILD R1 Shell → General payload retained; V3.61.139 UI polish only. Core translation/voice/network behavior retained; Cloud Run 3.7.17 unchanged."
 }
