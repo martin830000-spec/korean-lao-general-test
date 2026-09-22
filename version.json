@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.139 TEST",
-  "build": "20260922-V3.61.139-TEST-UI-POLISH-FINAL",
-  "buildId": "20260922-V3.61.139-TEST-UI-POLISH-FINAL",
-  "notes": "V3.61.138 GENERAL REBUILD R1 Shell → General payload retained; V3.61.139 UI polish only. Core translation/voice/network behavior retained; Cloud Run 3.7.17 unchanged."
+  "version": "V3.61.140 TEST",
+  "build": "20260922-V3.61.140-TEST-RESULT-COMPACT-M1",
+  "buildId": "20260922-V3.61.140-TEST-RESULT-COMPACT-M1",
+  "notes": "V3.61.139 UI baseline + V3.61.140 result-card compact UI: timing labels grouped left, translation-copy/retranslate moved to verification header, primary result color matched to couple app. Core translation/STT/TTS/Relay unchanged; Cloud Run 3.7.17 unchanged."
 }
