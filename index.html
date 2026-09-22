@@ -289,6 +289,57 @@ body{padding-bottom:calc(136px + env(safe-area-inset-bottom))!important}
 @media(max-width:430px){.multilang-select-row{grid-template-columns:minmax(0,1fr) minmax(124px,44%);gap:7px}.multilang-pair{font-size:12px}.multilang-select{font-size:12px;padding-left:8px;padding-right:24px}}
 @media(max-width:340px){.multilang-select-row{grid-template-columns:1fr}.multilang-select{min-height:40px}.multilang-hint{margin-top:5px}}
 </style>
+
+<style id="v361137-m6-bars-final">
+/* M6 UI-only: true couple-app bottom-bar visual parity + larger top-bar labels. No handlers/core logic changed. */
+/* Top bar: keep M5 geometry; increase readable text inside buttons. */
+.general-shell-guide-btn{font-size:13px!important}
+.general-mode-btn{font-size:13px!important}
+.general-shell-home{font-size:10.5px!important}
+.general-shell-home-label{font-size:10.5px!important}
+@media(max-width:480px){
+  .general-shell-guide-btn{font-size:12.5px!important}
+  .general-mode-btn{font-size:12.5px!important}
+  .general-shell-home,.general-shell-home-label{font-size:10px!important}
+}
+@media(max-width:360px){
+  .general-shell-guide-btn{font-size:11.5px!important}
+  .general-mode-btn{font-size:11.5px!important}
+  .general-shell-home,.general-shell-home-label{font-size:9.5px!important}
+}
+/* Bottom bar: couple-app visual box model is the source of truth; general-app labels/handlers stay unchanged. */
+.quickbar{padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))!important}
+.general-mode-switch{margin:0 auto 6px!important;gap:6px!important}
+.general-mode-tab{min-height:44px!important;padding:7px 9px!important;border:1px solid #d8e0ea!important;border-radius:11px!important;background:#fff!important;color:#475569!important;font-size:12px!important;font-weight:900!important;line-height:1.15!important;white-space:normal!important;word-break:keep-all!important}
+.general-mode-tab.active,.general-mode-tab:disabled{opacity:1!important;background:#e8f0fe!important;border-color:#9bbbf1!important;color:#174ea6!important}
+.quickbar-inner{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important}
+.quick-btn{min-width:0!important;min-height:52px!important;border:1px solid #d9e0ea!important;border-radius:12px!important;background:#fff!important;color:#334155!important;padding:6px 2px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:1px!important;font-weight:900!important;line-height:1.13!important;overflow:visible!important}
+.quick-btn .qicon{display:block!important;font-size:20px!important;line-height:1!important;margin-bottom:3px!important}
+.quick-btn .qtext{display:block!important;min-width:0!important;max-width:100%!important;text-align:center!important}
+.quick-btn .qmain{display:block!important;font-size:12px!important;line-height:1.12!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important;word-break:keep-all!important;text-align:center!important}
+.quick-btn.primary{background:#1a73e8!important;color:#fff!important;border-color:#1a73e8!important}
+.quick-btn.active{background:#e8f0fe!important;border-color:#9bbbf1!important;color:#174ea6!important}
+.quick-btn.stop{background:#fff0ef!important;border-color:#f2b8b5!important;color:#a61b1b!important}
+.quick-btn.stop .qmain,.quick-btn.stop .qicon{color:inherit!important}
+.quick-btn.primary.stop{background:#fff0ef!important;border-color:#f2b8b5!important;color:#a61b1b!important}
+.quick-auto-state{vertical-align:1px!important}
+@media(max-width:430px){
+  .quick-btn .qicon{font-size:19px!important}
+  .quick-btn .qmain{font-size:10.5px!important}
+}
+@media(max-width:360px){
+  body{padding-bottom:calc(140px + env(safe-area-inset-bottom))!important}
+  .general-mode-switch{gap:4px!important;margin-bottom:5px!important}
+  .general-mode-tab{min-height:44px!important;padding:6px 5px!important;font-size:11px!important}
+  .quickbar{padding-left:8px!important;padding-right:8px!important}
+  .quickbar-inner{gap:4px!important}
+}
+@media(max-width:350px){
+  .quick-btn{padding-left:1px!important;padding-right:1px!important}
+  .quick-btn .qicon{font-size:18px!important}
+  .quick-btn .qmain{font-size:10px!important}
+}
+</style>
 </head>
 <body>
 <div class="app">
