@@ -340,6 +340,26 @@ body{padding-bottom:calc(136px + env(safe-area-inset-bottom))!important}
   .quick-btn .qmain{font-size:10px!important}
 }
 </style>
+<style id="v361137-m7-layout-fold-final">
+/* V3.61.137 TEST M7 UI-only.
+   1) General-app content width follows the couple app: 500px desktop max and 6px mobile viewport padding.
+   2) General title follows the couple-app H2 responsive font rule.
+   3) Bottom safe-area is not added on top of the base 6px gap; this avoids Fold-cover extra blank space while preserving iOS/home-indicator safety.
+   Existing M6 topbar text-fit, mode-switch scroll preservation, hidden status copy, handlers and translation/STT/TTS logic are retained. */
+.app{width:min(500px,100%)!important}
+.general-title-block .title{font-size:17px!important}
+.quickbar{padding-bottom:max(6px,env(safe-area-inset-bottom))!important}
+body{padding-bottom:max(140px,calc(134px + env(safe-area-inset-bottom)))!important}
+@media(max-width:480px){
+  body{padding-left:max(6px,env(safe-area-inset-left))!important;padding-right:max(6px,env(safe-area-inset-right))!important}
+  .general-title-block .title{font-size:clamp(15px,4.3vw,17px)!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+}
+@media(max-width:360px){
+  body{padding-bottom:max(144px,calc(138px + env(safe-area-inset-bottom)))!important}
+}
+/* Reassert prior agreed UI-only conditions so later legacy rules cannot regress them. */
+#appNotice,#footerStatus{display:none!important}
+</style>
 </head>
 <body>
 <div class="app">
@@ -461,7 +481,7 @@ body{padding-bottom:calc(136px + env(safe-area-inset-bottom))!important}
 <script>
 'use strict';
 const APP_VERSION='V3.61.137 TEST';
-const BUILD_ID='20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5';
+const BUILD_ID='20260922-V3.61.137-TEST-LAYOUT-FOLD-M7';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const SEOUL_RELAY='https://lao-stt-relay-460077888071.asia-northeast3.run.app';

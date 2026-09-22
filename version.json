@@ -1,6 +1,6 @@
 {
   "version": "V3.61.137 TEST",
-  "build": "20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5",
-  "buildId": "20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5",
-  "notes": "UI-only TEST M5. General top bar now follows the current couple-app dimensions, spacing and responsive behavior; general bottom bar follows the current couple-app button heights, padding and gaps while keeping general-app actions/handlers. Korean/Lao mode switch scroll-preservation retained. Existing malformed nested style tags were normalized. Main app and Cloud Run 3.7.17 unchanged."
+  "build": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M7",
+  "buildId": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M7",
+  "notes": "UI-only TEST M7. Retains M6 top-bar text fitting and bottom-bar visuals; aligns general-app content width (500px desktop max and 6px mobile viewport padding) and title font rule to the couple app, and changes bottom safe-area handling from additive to max-based to remove Fold cover extra blank space. Korean/Lao mode-switch scroll preservation and hidden status copy retained. Main app and Cloud Run 3.7.17 unchanged."
 }
