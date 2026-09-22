@@ -204,11 +204,10 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 .result-clear-btn{border-color:#ecd0d0;background:#fff5f5;color:#9b2c2c}.result-large-btn{border-color:#d9e1f7;background:#f5f7ff;color:#3157d5}
 .input-tools-row .input-mic-btn{width:100%}
 @media(max-width:390px){.top-audio-toolbar{gap:6px}.top-audio-toolbar .btn{min-height:44px;padding:7px 6px;font-size:11.5px}.card-head-actions{gap:4px}.input-clear-btn,.result-clear-btn,.result-large-btn{font-size:10px;padding:6px 7px;min-height:34px}}
-
+</style>
 <style id="v361128-clean-initial-result">
 /* UX12: keep the general app compact until a translation actually starts. */
 .output-card[hidden]{display:none!important}
-</style>
 </style>
 <style id="v361133-input-clear-compact">
 /* UX17: compact right-aligned input-clear button; no oversized one-third-width block. */
@@ -247,24 +246,41 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 @media(max-width:520px){.general-shell-guide-label{display:none}.general-shell-guide-btn{width:34px;min-width:34px;padding:0}.general-switchbar{gap:3px;padding-left:4px;padding-right:4px}.general-mode-buttons{gap:3px}.general-mode-btn{min-width:0;flex:1 1 0;padding:5px 5px;font-size:11px}.general-shell-home{flex-basis:42px;width:42px}.general-shell-admin-gear{width:34px;min-width:34px}.general-title-block .title{font-size:16px}}
 @media(max-width:360px){.general-shell-version{font-size:8px;padding:4px 3px;max-width:42px;overflow:hidden}.general-shell-guide-btn,.general-shell-admin-gear{min-width:31px;width:31px}.general-mode-btn{font-size:10.5px;padding-left:3px;padding-right:3px}.general-shell-home{flex-basis:38px;width:38px}.general-shell-home-label{font-size:8px}.input-card .input-clear-btn{min-width:82px;max-width:112px;font-size:10.5px;padding-left:7px;padding-right:7px}}
 </style>
-<style id="v361137-general-ui-polish">
-/* V3.61.137 TEST UI-only: match couple-app topbar sizing, keep mode-switch scroll position, remove technical footer copy. */
-.general-switchbar{gap:3px!important;min-height:48px!important;height:53px!important;padding:max(3px,env(safe-area-inset-top)) max(4px,env(safe-area-inset-right)) 3px max(4px,env(safe-area-inset-left))!important;border-left:0!important;border-right:0!important;border-radius:0!important;margin-bottom:9px!important}
-.general-shell-version-tools{gap:3px!important;flex:0 0 auto!important;min-width:0!important}
-.general-shell-version{display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:9px!important;line-height:1!important;padding:5px 5px!important;white-space:nowrap!important}
-.general-shell-guide-btn,.general-mode-btn,.general-shell-home,.general-shell-admin-gear{min-height:44px!important}
-.general-shell-guide-btn{min-width:42px!important;max-width:150px!important;height:44px!important;padding:0 7px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;line-height:1!important}
-.general-shell-guide-label{display:block!important;white-space:nowrap!important;line-height:1.12!important;font-size:11px!important}
-.general-shell-admin-gear{flex:0 0 34px!important;width:34px!important;min-width:34px!important;height:44px!important;line-height:42px!important;padding:0!important}
-.general-mode-buttons{gap:3px!important;min-width:0!important;flex:1 1 auto!important}
-.general-mode-btn{flex:1 1 0!important;width:auto!important;min-width:0!important;max-width:none!important;padding:5px 3px!important;font-size:12px!important;line-height:1.15!important;overflow:hidden!important}
-.general-shell-home{flex:0 0 74px!important;width:74px!important;min-width:56px!important;height:44px!important;padding:4px 3px!important;font-size:9px!important;line-height:1.05!important}
-.general-shell-home-icon{font-size:14px!important;line-height:1!important}.general-shell-home-label{font-size:10.5px!important;line-height:1.05!important;text-align:center!important;white-space:normal!important;word-break:keep-all!important}
+<style id="v361137-general-bar-parity-m5">
+/* V3.61.137 TEST M5 UI-only. The couple app is the dimensional source of truth. */
+.general-switchbar{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Lao",Roboto,Arial,sans-serif!important;position:sticky!important;top:0!important;z-index:850!important;display:flex!important;align-items:center!important;gap:5px!important;min-height:48px!important;height:auto!important;width:100vw!important;margin:calc(-1 * max(10px,env(safe-area-inset-top))) 0 9px calc(50% - 50vw)!important;padding:max(4px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) 4px max(6px,env(safe-area-inset-left))!important;background:#fff!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;box-shadow:0 1px 4px rgba(0,0,0,.06)!important}
+.general-switchbar>*{min-width:0!important}
+.general-shell-version-tools{display:flex!important;align-items:center!important;gap:6px!important;flex:0 0 auto!important;min-width:0!important}
+.general-shell-version{flex:0 0 auto!important;display:block!important;white-space:nowrap!important;font-size:11px!important;font-weight:900!important;color:#666!important;background:#eef0f2!important;border-radius:6px!important;padding:6px 7px!important;line-height:normal!important}
+.general-shell-guide-btn{height:36px!important;min-height:44px!important;min-width:42px!important;max-width:150px!important;padding:0 9px!important;border:1px solid #d4d8dd!important;border-radius:8px!important;background:#f5f6f7!important;color:#4a4f55!important;font-size:12px!important;font-weight:900!important;white-space:nowrap!important;cursor:pointer!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;line-height:1!important}
+.general-shell-guide-btn>span:first-child{flex:0 0 auto!important;font-size:14px!important;line-height:1!important}
+.general-shell-guide-label{display:block!important;font-size:inherit;white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important;line-height:1.12!important}
+.general-mode-buttons{display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;min-width:0!important;flex:1 1 auto!important}
+.general-mode-btn{flex:0 1 auto!important;width:auto!important;min-width:82px!important;min-height:44px!important;border:1px solid #ccd6e0!important;border-radius:8px!important;background:#fff!important;color:#4b5563!important;padding:7px 10px!important;font-size:12px!important;font-weight:900!important;white-space:nowrap!important;overflow:hidden!important}
+.general-mode-btn>span{display:block!important;white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important;line-height:1.12!important}
+.general-mode-btn.active{background:#e8f0fe!important;border-color:#a8c1ee!important;color:#1a73e8!important}
+.general-shell-right-tools{display:flex!important;align-items:center!important;gap:4px!important;flex:0 0 auto!important;min-width:0!important}
+.general-shell-home{flex:0 0 74px!important;width:74px!important;min-width:56px!important;min-height:44px!important;border:1px solid #ccd6e0!important;border-radius:8px!important;background:#fff!important;color:#4b5563!important;padding:3px 3px!important;font-size:9px!important;font-weight:900!important;line-height:1.05!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:1px!important;white-space:normal!important}
+.general-shell-home-icon{font-size:13px!important;line-height:1!important}.general-shell-home-label{display:block!important;width:100%!important;min-width:0!important;text-align:center!important;line-height:1.05!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:keep-all!important}
+.general-shell-admin-gear{flex:0 0 auto!important;width:36px!important;height:36px!important;min-width:36px!important;min-height:44px!important;padding:0!important;border:1px solid #d4d8dd!important;border-radius:8px!important;background:#f5f6f7!important;color:#4a4f55!important;font-size:18px!important;line-height:34px!important;text-align:center!important}
 #appNotice,#footerStatus{display:none!important}
-@media(min-width:361px) and (max-width:430px){.general-switchbar{height:54px!important}}
-@media(max-width:520px){.general-shell-guide-label{display:none!important}.general-shell-guide-btn{width:42px!important;min-width:42px!important;padding:0 4px!important}.general-mode-btn{font-size:11px!important}.general-shell-home{flex-basis:64px!important;width:64px!important}.general-shell-home-label{font-size:9.8px!important}}
-@media(max-width:400px){.general-shell-version{font-size:8px!important;padding:4px 3px!important;min-width:32px!important;max-width:38px!important;overflow:hidden!important}.general-shell-guide-btn{flex:0 0 31px!important;width:31px!important;min-width:31px!important}.general-shell-admin-gear{flex-basis:31px!important;width:31px!important;min-width:31px!important}.general-mode-btn{font-size:10.5px!important}.general-shell-home{flex-basis:64px!important;width:64px!important;min-width:56px!important}}
-@media(max-width:350px){.general-mode-btn{font-size:10px!important}.general-shell-home{flex-basis:56px!important;width:56px!important;min-width:56px!important}}
+@media(max-width:560px){.general-shell-version-tools{gap:3px!important}.general-shell-guide-btn{height:34px!important;min-width:42px!important;line-height:32px!important;padding:0 7px!important}.general-shell-admin-gear{width:32px!important;height:34px!important;min-width:32px!important;line-height:32px!important}}
+@media(max-width:520px) and (min-width:351px){.general-shell-guide-btn{flex:0 0 88px!important;width:88px!important;min-width:88px!important;height:34px!important;padding:0 4px!important;line-height:1.05!important}}
+@media(max-width:480px){.general-switchbar{gap:3px!important;min-height:44px!important;padding:max(3px,env(safe-area-inset-top)) max(4px,env(safe-area-inset-right)) 3px max(4px,env(safe-area-inset-left))!important}.general-shell-version-tools{gap:3px!important;flex:0 0 auto!important}.general-shell-version{font-size:9px!important;padding:5px 5px!important}.general-mode-buttons{gap:3px!important;min-width:0!important;flex:1 1 auto!important;max-width:none!important}.general-mode-btn{flex:1 1 0!important;width:auto!important;min-width:0!important;max-width:none!important;min-height:44px!important;padding:5px 3px!important;font-size:12px!important}.general-shell-home{flex:0 0 74px!important;width:74px!important;min-width:56px!important;min-height:44px!important;padding:4px 3px!important;font-size:9px!important}.general-shell-home-icon{font-size:14px!important}.general-shell-admin-gear{width:34px!important;height:34px!important;min-width:34px!important;line-height:32px!important}}
+@media(max-width:400px){.general-switchbar{gap:3px!important;padding-left:max(4px,env(safe-area-inset-left))!important;padding-right:max(4px,env(safe-area-inset-right))!important}.general-shell-version{display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:8px!important;line-height:1!important;padding:4px 3px!important;min-width:32px!important;max-width:38px!important;overflow:hidden!important}.general-shell-version-tools{gap:3px!important;min-width:0!important}.general-shell-admin-gear{flex:0 0 31px!important;width:31px!important;min-width:31px!important}.general-shell-home{flex-basis:64px!important;width:64px!important;min-width:56px!important}}
+@media(max-width:360px){.general-mode-btn{font-size:11px!important}}
+@media(max-width:350px){.general-shell-guide-btn{flex:0 0 78px!important;width:78px!important;min-width:78px!important;gap:2px!important;padding-left:3px!important;padding-right:3px!important}}
+/* Bottom bar: same dimensions as the current couple-app bottom bar; content/handlers stay general-app-specific. */
+body{padding-bottom:calc(136px + env(safe-area-inset-bottom))!important}
+.quickbar{padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))!important}
+.general-mode-switch{margin:0 auto 6px!important;gap:6px!important}
+.general-mode-tab{min-height:44px!important;padding:7px 9px!important;border-radius:11px!important;font-size:12px!important;line-height:1.15!important}
+.quickbar-inner{gap:4px!important}
+.quick-btn{min-height:52px!important;padding:6px 2px!important;border-radius:12px!important}
+.quick-btn .qicon{font-size:20px!important;line-height:1!important;margin-bottom:3px!important}.quick-btn .qmain{font-size:12px!important;line-height:1.12!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:keep-all!important}
+@media(max-width:430px){.quick-btn .qicon{font-size:19px!important}.quick-btn .qmain{font-size:10.5px!important}}
+@media(max-width:360px){body{padding-bottom:calc(140px + env(safe-area-inset-bottom))!important}.general-mode-switch{gap:4px!important;margin-bottom:5px!important}.general-mode-tab{min-height:44px!important;padding:6px 5px!important;font-size:11px!important}.quickbar{padding-left:8px!important;padding-right:8px!important}.quickbar-inner{gap:4px!important}}
+@media(max-width:350px){.quick-btn{padding-left:1px!important;padding-right:1px!important}.quick-btn .qicon{font-size:18px!important}.quick-btn .qmain{font-size:10px!important}}
 </style>
 <style id="multilang-test-m1-css">
 .multilang-select-card{padding:10px 12px;margin-bottom:10px;border-color:#cbd9ff;background:linear-gradient(180deg,#f7f9ff,#fff)}
@@ -278,7 +294,7 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 <div class="app">
   <div class="general-switchbar" id="generalSwitchbar" role="navigation" aria-label="통역기 사용자 모드 선택">
     <div class="general-shell-version-tools"><span class="general-shell-version" id="versionText">V3.61.137 TEST</span><button class="general-shell-guide-btn" id="manualBtn" type="button" title="자세한 설명서" aria-label="자세한 설명서"><span aria-hidden="true">📖</span><span class="general-shell-guide-label" id="manualBtnText">자세한 설명서</span></button></div>
-    <div class="general-mode-buttons"><button class="general-mode-btn active" id="generalHusbandModeBtn" type="button" aria-pressed="true">🇰🇷 한국</button><button class="general-mode-btn" id="generalWifeModeBtn" type="button" aria-pressed="false">🇱🇦 ລາວ</button></div>
+    <div class="general-mode-buttons"><button class="general-mode-btn active" id="generalHusbandModeBtn" type="button" aria-pressed="true"><span id="generalHusbandModeLabel">🇰🇷 한국</span></button><button class="general-mode-btn" id="generalWifeModeBtn" type="button" aria-pressed="false"><span id="generalWifeModeLabel">🇱🇦 ລາວ</span></button></div>
     <div class="general-shell-right-tools"><button class="general-shell-home" id="homeBtn" type="button" title="처음으로" aria-label="처음으로"><span class="general-shell-home-icon">🏠</span><span class="general-shell-home-label" id="homeBtnText">처음</span></button><button class="general-shell-admin-gear" id="adminBtn" type="button" title="관리자 도구" aria-label="관리자 도구">⚙️</button></div>
   </div>
   <div class="general-title-block"><div class="title-wrap"><div class="title" id="appTitle">🌏 일상 다국어 통역</div><div class="subtitle" id="appSubtitle">여행·일상 대화를 자연스럽게 통역합니다</div></div></div>
@@ -394,7 +410,7 @@ body.mobile-keyboard-open .quickbar{padding-top:7px;bottom:var(--keyboard-lift,0
 <script>
 'use strict';
 const APP_VERSION='V3.61.137 TEST';
-const BUILD_ID='20260922-V3.61.137-TEST-GENERAL-UI-POLISH-M4';
+const BUILD_ID='20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const SEOUL_RELAY='https://lao-stt-relay-460077888071.asia-northeast3.run.app';
@@ -516,8 +532,8 @@ function goCoupleAppWithMode(){const mode=state.userMode==='wife'?'wife':'husban
 function uiLang(){return state.userMode==='wife'?'lo':'ko'}
 function uiT(ko,lo){return uiLang()==='lo'?lo:ko}
 function setTxt(id,ko,lo){const e=$(id);if(e)e.textContent=uiT(ko,lo)}
-function fitGeneralText(button,textEl,maxPx,minPx){if(!button||!textEl||button.offsetWidth<=0)return;let size=Number(maxPx)||13,min=Number(minPx)||8;textEl.style.fontSize=size+'px';const cs=getComputedStyle(button),avail=Math.max(8,button.clientWidth-parseFloat(cs.paddingLeft||0)-parseFloat(cs.paddingRight||0)-4);let guard=30;while(guard-->0&&size>min&&textEl.scrollWidth>avail){size=Math.max(min,size-.5);textEl.style.fontSize=size+'px'}}
-function fitGeneralTopbar(){requestAnimationFrame(()=>{fitGeneralText(document.querySelector('.general-title-block .title-wrap'),$('appTitle'),17,12);fitGeneralText($('manualBtn'),$('manualBtnText'),11,8.5)})}
+function fitGeneralText(button,textEl,maxPx,minPx){if(!button||!textEl||button.offsetWidth<=0)return;let size=Number(maxPx)||13,min=Number(minPx)||8;textEl.style.fontSize=size+'px';const icon=button.querySelector?.('.general-shell-home-icon,.general-shell-guide-btn>span:first-child'),iconW=icon?icon.getBoundingClientRect().width+5:0,cs=getComputedStyle(button),avail=Math.max(8,button.clientWidth-parseFloat(cs.paddingLeft||0)-parseFloat(cs.paddingRight||0)-iconW-3);let guard=30;while(guard-->0&&size>min&&textEl.scrollWidth>avail){size=Math.max(min,size-.5);textEl.style.fontSize=size+'px'}}
+function fitGeneralTopbar(){requestAnimationFrame(()=>{fitGeneralText(document.querySelector('.general-title-block .title-wrap'),$('appTitle'),17,12);fitGeneralText($('generalHusbandModeBtn'),$('generalHusbandModeLabel'),15,9.5);fitGeneralText($('generalWifeModeBtn'),$('generalWifeModeLabel'),15,9);fitGeneralText($('manualBtn'),$('manualBtnText'),13.5,8.5);fitGeneralText($('homeBtn'),$('homeBtnText'),13,6)})}
 try{new ResizeObserver(fitGeneralTopbar).observe(document.querySelector('.general-switchbar'))}catch(_){window.addEventListener('resize',fitGeneralTopbar)}
 function syncGeneralModeButtons(){const husband=state.userMode!=='wife',hb=$('generalHusbandModeBtn'),wb=$('generalWifeModeBtn');if(hb){hb.classList.toggle('active',husband);hb.setAttribute('aria-pressed',String(husband))}if(wb){wb.classList.toggle('active',!husband);wb.setAttribute('aria-pressed',String(!husband))}}
 function selectGeneralUserMode(mode){const next=mode==='wife'?'wife':'husband';if(next===state.userMode){syncGeneralModeButtons();return}const keepX=window.scrollX||0,keepY=window.scrollY||0;voiceCancel(true);stopTtsPlayback();state.runId++;abortRuns();state.backPromise=null;setTranslateUi(false);state.userMode=next;saveUserMode();state.partnerLang=readPartnerLang(next);state.direction='FWD';saveDirectionSession();ui.input.value='';ui.count.textContent='0';state.inputDirty=false;state.loadedHistoryId='';state.loadedHistorySource='';state.loadedHistoryDirection='';try{ui.input.dispatchEvent(new Event('input',{bubbles:true}))}catch(_){}dismissSoftKeyboard();applyDirection();syncGeneralModeButtons();const restore=()=>{try{window.scrollTo({left:keepX,top:keepY,behavior:'auto'})}catch(_){try{window.scrollTo(keepX,keepY)}catch(__){}}};requestAnimationFrame(()=>{restore();requestAnimationFrame(restore)});setTimeout(restore,120);maybeApplyUpdate()}
@@ -525,7 +541,7 @@ function applyUiLanguage(){
  const lo=uiLang()==='lo'; document.documentElement.lang=lo?'lo':'ko';
  setTxt('appTitle','🌏 일상 다국어 통역','🌏 ລ່າມຫຼາຍພາສາປະຈຳວັນ');
  setTxt('appSubtitle','여행·일상 대화를 자연스럽게 통역합니다','ແປການສົນທະນາທ່ອງທ່ຽວ ແລະ ປະຈຳວັນໃຫ້ເປັນທຳມະຊາດ');
- setTxt('manualBtnText','자세한 설명서','ຄູ່ມືລະອຽດ'); setTxt('homeBtnText','처음','ໜ້າທຳອິດ'); setTxt('generalHusbandModeBtn','🇰🇷 한국','🇰🇷 ເກົາຫຼີ'); setTxt('generalWifeModeBtn','🇱🇦 라오','🇱🇦 ລາວ'); setTxt('manualKicker','통역앱','ແອັບລ່າມ'); setTxt('coupleAppBtnText','부부대화','ສົນທະນາຄູ່ສົມລົດ'); setTxt('generalAppCurrentText','일반 통역','ລ່າມທົ່ວໄປ'); setTxt('manualTitle','통역앱 자세한 설명서','ຄູ່ມືແອັບລ່າມ'); $('manualClose')?.setAttribute('aria-label',uiT('설명서 닫기','ປິດຄູ່ມື'));
+ setTxt('manualBtnText','자세한 설명서','ຄູ່ມືລະອຽດ'); setTxt('homeBtnText','처음','ໜ້າທຳອິດ'); setTxt('generalHusbandModeLabel','🇰🇷 한국','🇰🇷 ເກົາຫຼີ'); setTxt('generalWifeModeLabel','🇱🇦 라오스','🇱🇦 ລາວ'); setTxt('manualKicker','통역앱','ແອັບລ່າມ'); setTxt('coupleAppBtnText','부부대화','ສົນທະນາຄູ່ສົມລົດ'); setTxt('generalAppCurrentText','일반 통역','ລ່າມທົ່ວໄປ'); setTxt('manualTitle','통역앱 자세한 설명서','ຄູ່ມືແອັບລ່າມ'); $('manualClose')?.setAttribute('aria-label',uiT('설명서 닫기','ປິດຄູ່ມື'));
  setTxt('srcRole','말하는 언어','ພາສາທີ່ເວົ້າ'); setTxt('dstRole','보여줄 언어','ພາສາທີ່ຈະສະແດງ');
  setTxt('directionTip','화자 성별·나이·관계는 원문에 있을 때만 반영합니다.','ຈະລະບຸເພດ ອາຍຸ ຫຼື ຄວາມສຳພັນ ເມື່ອຕົ້ນສະບັບລະບຸເທົ່ານັ້ນ.');
  setTxt('clearInputBtn','입력 지우기','ລ້າງຂໍ້ຄວາມ'); setTxt('clearCurrentConversationBtn','↺ 전체 지우기','↺ ລ້າງທັງໝົດ'); setTxt('autoInterpretLabel','자동통역','ແປອັດຕະໂນມັດ');
@@ -739,7 +755,7 @@ state.history=readHistory().slice(0,50);syncPersistentToggleStateFromStorage();r
 <script id="universal-button-autofit-v361124">
 (function installUniversalButtonAutofit(){
   if(window.__universalButtonAutofitV361124)return;window.__universalButtonAutofitV361124=true;
-  const EXCLUDE='.quality-reason-close,.manual-close,.fs-close,.settings-mini,.admin-mini,.shell-admin-gear';
+  const EXCLUDE='.quality-reason-close,.manual-close,.fs-close,.settings-mini,.admin-mini,.shell-admin-gear,.general-shell-guide-btn,.general-shell-home,.general-mode-btn';
   let raf=0;
   function visibleText(btn){return String(btn?.textContent||'').replace(/\s+/g,' ').trim()}
   function meaningful(btn){return /[\p{L}\p{N}]/u.test(visibleText(btn))}

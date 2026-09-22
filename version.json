@@ -1,6 +1,6 @@
 {
   "version": "V3.61.137 TEST",
-  "build": "20260922-V3.61.137-TEST-GENERAL-UI-POLISH-M4",
-  "buildId": "20260922-V3.61.137-TEST-GENERAL-UI-POLISH-M4",
-  "notes": "UI-only TEST M4. General Korean/Lao mode switch preserves viewport; general top bar matches couple-app sizing; couple-app bottom bar matches general-app sizing; general technical STT/TTS/footer notices hidden. Translation/STT/TTS/voice policy unchanged; Cloud Run 3.7.17 unchanged."
+  "build": "20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5",
+  "buildId": "20260922-V3.61.137-TEST-GENERAL-BAR-PARITY-M5",
+  "notes": "UI-only TEST M5. General top bar now follows the current couple-app dimensions, spacing and responsive behavior; general bottom bar follows the current couple-app button heights, padding and gaps while keeping general-app actions/handlers. Korean/Lao mode switch scroll-preservation retained. Existing malformed nested style tags were normalized. Main app and Cloud Run 3.7.17 unchanged."
 }
