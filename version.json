@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.141 TEST",
-  "build": "20260922-V3.61.141-TEST-UI-STABILITY-M2",
-  "buildId": "20260922-V3.61.141-TEST-UI-STABILITY-M2",
-  "notes": "V3.61.140 baseline + V3.61.141 stability patch: translation-copy/retranslate buttons match upper result controls, stale update-sync toast lifecycle fixed, translation-copy button preserves child spans and blocks concurrent clicks. Core translation/STT/TTS/Relay unchanged; Cloud Run 3.7.17 unchanged."
+  "version": "V3.61.142 TEST",
+  "build": "20260922-V3.61.142-TEST-BACKTIME-M1",
+  "buildId": "20260922-V3.61.142-TEST-BACKTIME-M1",
+  "notes": "V3.61.142 TEST: BUILD_ID is synchronized with version.json to stop false update-sync detection when entering the general app. Existing meaning-check timing remains unchanged. Translation/STT/TTS/Relay core unchanged; Cloud Run 3.7.17 unchanged."
 }
