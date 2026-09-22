@@ -340,26 +340,40 @@ body{padding-bottom:calc(136px + env(safe-area-inset-bottom))!important}
   .quick-btn .qmain{font-size:10px!important}
 }
 </style>
-<style id="v361137-m7-layout-fold-final">
-/* V3.61.137 TEST M7 UI-only.
-   1) General-app content width follows the couple app: 500px desktop max and 6px mobile viewport padding.
-   2) General title follows the couple-app H2 responsive font rule.
-   3) Bottom safe-area is not added on top of the base 6px gap; this avoids Fold-cover extra blank space while preserving iOS/home-indicator safety.
-   Existing M6 topbar text-fit, mode-switch scroll preservation, hidden status copy, handlers and translation/STT/TTS logic are retained. */
-.app{width:min(500px,100%)!important}
-.general-title-block .title{font-size:17px!important}
-.quickbar{padding-bottom:max(6px,env(safe-area-inset-bottom))!important}
-body{padding-bottom:max(140px,calc(134px + env(safe-area-inset-bottom)))!important}
+
+<style id="v361137-m8-layout-fold-final">
+/* V3.61.137 TEST M8 UI-only: final rendered parity based on M6. No translation/STT/TTS/Relay handlers changed. */
+/* Main content width: mirror the couple payload's actual final body/container rule. */
+.app{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
 @media(max-width:480px){
   body{padding-left:max(6px,env(safe-area-inset-left))!important;padding-right:max(6px,env(safe-area-inset-right))!important}
-  .general-title-block .title{font-size:clamp(15px,4.3vw,17px)!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
 }
+/* Main title: match the corresponding couple-app title in each user mode. */
+html[lang="ko"] #appTitle{font-size:17px!important}
+html[lang="lo"] #appTitle{font-size:18px!important}
+@media(max-width:480px){
+  html[lang="ko"] #appTitle{font-size:clamp(15px,4.3vw,17px)!important}
+  html[lang="lo"] #appTitle{font-size:clamp(16px,4.4vw,18px)!important}
+}
+/* Topbar labels: let fitGeneralText measure the text itself instead of a full-width block box. */
+#generalHusbandModeLabel,#generalWifeModeLabel,#manualBtnText,#homeBtnText{display:inline-block!important;width:auto!important;max-width:100%!important}
+/* The couple app runs inside an iframe where bottom safe-area is effectively zero.
+   Keep the general-app bottom bar visually identical on Fold cover screens by not adding
+   the top-level safe-area a second time. Left/right safe-area handling is retained. */
+body{padding-bottom:136px!important}
+.quickbar{padding-bottom:6px!important}
 @media(max-width:360px){
-  body{padding-bottom:max(144px,calc(138px + env(safe-area-inset-bottom)))!important}
+  body{padding-bottom:140px!important}
+  .general-mode-btn{padding-left:1px!important;padding-right:1px!important}
 }
-/* Reassert prior agreed UI-only conditions so later legacy rules cannot regress them. */
-#appNotice,#footerStatus{display:none!important}
+/* Lao labels wrap one extra line below 380 CSS px; keep the bottom bar on the same 52px grid as the couple app. */
+@media(max-width:379px){
+  html[lang="lo"] .quick-btn{height:52px!important;min-height:52px!important;max-height:52px!important;padding:3px 1px!important;overflow:hidden!important}
+  html[lang="lo"] .quick-btn .qicon{font-size:16px!important;margin-bottom:1px!important}
+  html[lang="lo"] .quick-btn .qmain{font-size:8.5px!important;line-height:1.02!important}
+}
 </style>
+
 </head>
 <body>
 <div class="app">
@@ -481,7 +495,7 @@ body{padding-bottom:max(140px,calc(134px + env(safe-area-inset-bottom)))!importa
 <script>
 'use strict';
 const APP_VERSION='V3.61.137 TEST';
-const BUILD_ID='20260922-V3.61.137-TEST-LAYOUT-FOLD-M7';
+const BUILD_ID='20260922-V3.61.137-TEST-LAYOUT-FOLD-M8';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const SEOUL_RELAY='https://lao-stt-relay-460077888071.asia-northeast3.run.app';

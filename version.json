@@ -1,6 +1,6 @@
 {
   "version": "V3.61.137 TEST",
-  "build": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M7",
-  "buildId": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M7",
-  "notes": "UI-only TEST M7. Retains M6 top-bar text fitting and bottom-bar visuals; aligns general-app content width (500px desktop max and 6px mobile viewport padding) and title font rule to the couple app, and changes bottom safe-area handling from additive to max-based to remove Fold cover extra blank space. Korean/Lao mode-switch scroll preservation and hidden status copy retained. Main app and Cloud Run 3.7.17 unchanged."
+  "build": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M8",
+  "buildId": "20260922-V3.61.137-TEST-LAYOUT-FOLD-M8",
+  "notes": "UI-only TEST M8 based on M6. General-app content width now follows the couple-app actual responsive width (6px sides at <=480px, 10px above, no 760px desktop cap). Title matches the corresponding couple app (Korean mode 15–17px, Lao mode 16–18px). Topbar label fitting now measures the text itself so button text uses the available space without changing topbar geometry. Fold/top-level bottom safe-area is not double-added. Narrow Lao quickbar remains on the same 52px button grid. Existing mode-switch scroll preservation and hidden technical footer are retained. Main app and Cloud Run 3.7.17 are unchanged."
 }
