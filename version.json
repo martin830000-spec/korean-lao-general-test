@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.135 TEST",
-  "build": "20260922-V3.61.135-TEST-GENERAL-MULTILANG-M2-TTS",
-  "buildId": "20260922-V3.61.135-TEST-GENERAL-MULTILANG-M2-TTS",
-  "notes": "Multilingual TEST M2. Client translation/STT/TTS mapping is unchanged from V3.61.134 M1. Requires Cloud Run 3.7.15 multilingual Azure TTS allowlist for en-US, zh-CN, ja-JP, th-TH. SERVICE client untouched."
+  "version": "V3.61.136 TEST",
+  "build": "20260922-V3.61.136-TEST-GENERAL-MULTILANG-M3-UI-VOICE",
+  "buildId": "20260922-V3.61.136-TEST-GENERAL-MULTILANG-M3-UI-VOICE",
+  "notes": "Multilingual TEST M3. Main-app-style top bar, compact input header, fixed daily multilingual interpreter title, husband-mode male TTS / wife-mode female TTS. Requires Cloud Run 3.7.17 dual-gender TTS allowlist. SERVICE client untouched."
 }
