@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.154 TEST",
-  "build": "20260924-V3.61.154-TEST-REL-CONTINUITY-M1",
-  "buildId": "20260924-V3.61.154-TEST-REL-CONTINUITY-M1",
-  "notes": "V3.61.154 TEST / P153A: REL-only semantic refinement from V153/P152A. Keeps clear third-party sibling references distinct from spouse/self across clauses and keeps Lao transfer recipients distinct from possession. Base/back prompts and non-REL SMART rules unchanged; general app/STT/TTS/Cloud Run 3.7.17/relay/fallback/UI/foreign-script manual-retranslate flow unchanged."
+  "version": "V3.61.147 TEST",
+  "build": "20260923-V3.61.147-TEST-QUALITYTIMING-M5",
+  "buildId": "20260923-V3.61.147-TEST-QUALITYTIMING-M5",
+  "notes": "V3.61.147 TEST: 본앱 품질비교 진단 계측 강화에 맞춘 버전/build 동기화. 일반앱 번역/STT/TTS/Relay/prompt core는 V3.61.146과 동일. Cloud Run 3.7.17 unchanged."
 }
