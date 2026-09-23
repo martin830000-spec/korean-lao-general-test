@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.143 TEST",
-  "build": "20260923-V3.61.143-TEST-PROMPTSMART-M1",
-  "buildId": "20260923-V3.61.143-TEST-PROMPTSMART-M1",
-  "notes": "V3.61.143 TEST: general interpreter translation/STT/TTS/Relay/prompt core unchanged from accepted V3.61.142 TEST; version/build synchronized with main TEST. Cloud Run 3.7.17 unchanged."
+  "version": "V3.61.144 TEST",
+  "build": "20260923-V3.61.144-TEST-PROMPTSMART-M2",
+  "buildId": "20260923-V3.61.144-TEST-PROMPTSMART-M2",
+  "notes": "V3.61.144 TEST: 본앱 초기화 hotfix에 맞춘 버전/build 동기화만 수행. 일반앱 번역/STT/TTS/Relay/prompt core는 V3.61.143과 동일. Cloud Run 3.7.17 unchanged."
 }
