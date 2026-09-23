@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.142 TEST",
-  "build": "20260922-V3.61.142-TEST-BACKTIME-M1",
-  "buildId": "20260922-V3.61.142-TEST-BACKTIME-M1",
-  "notes": "V3.61.142 TEST: BUILD_ID is synchronized with version.json to stop false update-sync detection when entering the general app. Existing meaning-check timing remains unchanged. Translation/STT/TTS/Relay core unchanged; Cloud Run 3.7.17 unchanged."
+  "version": "V3.61.143 TEST",
+  "build": "20260923-V3.61.143-TEST-PROMPTSMART-M1",
+  "buildId": "20260923-V3.61.143-TEST-PROMPTSMART-M1",
+  "notes": "V3.61.143 TEST: general interpreter translation/STT/TTS/Relay/prompt core unchanged from accepted V3.61.142 TEST; version/build synchronized with main TEST. Cloud Run 3.7.17 unchanged."
 }
