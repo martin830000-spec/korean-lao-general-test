@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.147 TEST",
-  "build": "20260923-V3.61.147-TEST-QUALITYTIMING-M5",
-  "buildId": "20260923-V3.61.147-TEST-QUALITYTIMING-M5",
-  "notes": "V3.61.147 TEST: 본앱 품질비교 진단 계측 강화에 맞춘 버전/build 동기화. 일반앱 번역/STT/TTS/Relay/prompt core는 V3.61.146과 동일. Cloud Run 3.7.17 unchanged."
+  "version": "V3.61.163 TEST",
+  "build": "20260924-V3.61.163-TEST-MAIN-LARGE-VIEW-M1",
+  "buildId": "20260924-V3.61.163-TEST-MAIN-LARGE-VIEW-M1",
+  "notes": "V3.61.163 TEST: unified package version sync. General G148A prompt-config, keyboard translate, translation/back-translation, STT/TTS and network paths are unchanged from V3.61.162 TEST; this build adds large view only to the couple app."
 }
