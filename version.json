@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.163 TEST",
-  "build": "20260924-V3.61.163-TEST-MAIN-LARGE-VIEW-M1",
-  "buildId": "20260924-V3.61.163-TEST-MAIN-LARGE-VIEW-M1",
-  "notes": "V3.61.163 TEST: unified package version sync. General G148A prompt-config, keyboard translate, translation/back-translation, STT/TTS and network paths are unchanged from V3.61.162 TEST; this build adds large view only to the couple app."
+  "version": "V3.61.164 TEST",
+  "build": "20260924-V3.61.164-TEST-SEMANTIC-GUARD-M2",
+  "buildId": "20260924-V3.61.164-TEST-SEMANTIC-GUARD-M2",
+  "notes": "V3.61.164 TEST unified version sync. General G148A prompt-config, keyboard translate, translation/back-translation, STT/TTS and network paths are unchanged from V3.61.163; functional change is limited to the couple K2L Semantic Guard M2 and diagnostic observability."
 }
