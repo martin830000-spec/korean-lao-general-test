@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.168 TEST",
-  "build": "20260925-V3.61.168-TEST-VERSION-SYNC-GUARD-R1",
-  "buildId": "20260925-V3.61.168-TEST-VERSION-SYNC-GUARD-R1",
-  "notes": "V3.61.168 TEST Version Sync Guard R1. General G148A translation/back-translation/STT/TTS/network behavior is unchanged; shell/runtime/build version metadata is synchronized from the release manifest."
+  "version": "V3.61.169 TEST",
+  "build": "20260925-V3.61.169-TEST-SEMANTIC-FIDELITY-R1",
+  "buildId": "20260925-V3.61.169-TEST-SEMANTIC-FIDELITY-R1",
+  "notes": "V3.61.169 TEST Semantic Fidelity R1. General prompt G149A prioritizes exact meaning and avoids missing-context inference; call count/STT/TTS/network unchanged."
 }
