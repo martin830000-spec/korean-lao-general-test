@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.169 TEST",
-  "build": "20260925-V3.61.169-TEST-SEMANTIC-FIDELITY-R1",
-  "buildId": "20260925-V3.61.169-TEST-SEMANTIC-FIDELITY-R1",
-  "notes": "V3.61.169 TEST Semantic Fidelity R1. General prompt G149A prioritizes exact meaning and avoids missing-context inference; call count/STT/TTS/network unchanged."
+  "version": "V3.61.170 TEST",
+  "build": "20260925-V3.61.170-TEST-GENERAL-TELEMETRY-R1",
+  "buildId": "20260925-V3.61.170-TEST-GENERAL-TELEMETRY-R1",
+  "notes": "V3.61.170 TEST General Telemetry R1. G149A unchanged. General K↔L translations are queued after forward display and uploaded asynchronously after verification for unified diagnostics; translation/STT/TTS/network unchanged."
 }
