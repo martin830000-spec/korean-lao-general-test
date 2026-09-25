@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.166 TEST",
-  "build": "20260925-V3.61.166-TEST-STRUCTURE-SAFETY-R1",
-  "buildId": "20260925-V3.61.166-TEST-STRUCTURE-SAFETY-R1",
-  "notes": "V3.61.166 TEST unified version sync for Structure Safety R1. General G148A translation/back-translation/STT/TTS/network behavior is unchanged from V3.61.165."
+  "version": "V3.61.167 TEST",
+  "build": "20260925-V3.61.167-TEST-QUALITY-GUARD-R1",
+  "buildId": "20260925-V3.61.167-TEST-QUALITY-GUARD-R1",
+  "notes": "V3.61.167 TEST unified version sync for Quality Guard R1. General G148A translation/back-translation/STT/TTS/network behavior is unchanged from V3.61.165; only diagnostic safety infrastructure is extended."
 }
