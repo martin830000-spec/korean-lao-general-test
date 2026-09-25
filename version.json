@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.167 TEST",
-  "build": "20260925-V3.61.167-TEST-QUALITY-GUARD-R1",
-  "buildId": "20260925-V3.61.167-TEST-QUALITY-GUARD-R1",
-  "notes": "V3.61.167 TEST unified version sync for Quality Guard R1. General G148A translation/back-translation/STT/TTS/network behavior is unchanged from V3.61.165; only diagnostic safety infrastructure is extended."
+  "version": "V3.61.168 TEST",
+  "build": "20260925-V3.61.168-TEST-VERSION-SYNC-GUARD-R1",
+  "buildId": "20260925-V3.61.168-TEST-VERSION-SYNC-GUARD-R1",
+  "notes": "V3.61.168 TEST Version Sync Guard R1. General G148A translation/back-translation/STT/TTS/network behavior is unchanged; shell/runtime/build version metadata is synchronized from the release manifest."
 }
