@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.176 TEST",
-  "build": "20260926-V3.61.176-TEST-SEMANTIC-FIDELITY-R4",
-  "buildId": "20260926-V3.61.176-TEST-SEMANTIC-FIDELITY-R4",
-  "notes": "V3.61.176 TEST final candidate. General G151A adds only state-breadth preservation; existing G150A semantic rules and live translation plumbing/STT/TTS/network remain unchanged."
+  "version": "V3.61.177 TEST",
+  "build": "20260926-V3.61.177-TEST-SEMANTIC-FIDELITY-R5",
+  "buildId": "20260926-V3.61.177-TEST-SEMANTIC-FIDELITY-R5",
+  "notes": "V3.61.177 TEST package sync. General prompt remains byte-identical G151A; only shared TEST release/version metadata is updated. STT/TTS, live translation plumbing, network and Cloud Run 3.7.18 are unchanged."
 }
