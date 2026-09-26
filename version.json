@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.173 TEST",
-  "build": "20260926-V3.61.173-TEST-GENERAL-DIAG-BRIDGE-R1",
-  "buildId": "20260926-V3.61.173-TEST-GENERAL-DIAG-BRIDGE-R1",
-  "notes": "V3.61.173 TEST General Diagnostic Bridge R1. Diagnostic-only bridge now uses the current readCredentials loader; G150A and live general translation behavior are unchanged."
+  "version": "V3.61.174 TEST",
+  "build": "20260926-V3.61.174-TEST-BULK-STRESS-DIAG-R1",
+  "buildId": "20260926-V3.61.174-TEST-BULK-STRESS-DIAG-R1",
+  "notes": "V3.61.174 TEST version sync for diagnostic bulk stress testing. G150A and live general translation behavior are unchanged."
 }
