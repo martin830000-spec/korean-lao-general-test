@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.175 TEST",
-  "build": "20260926-V3.61.175-TEST-SEMANTIC-FIDELITY-R3",
-  "buildId": "20260926-V3.61.175-TEST-SEMANTIC-FIDELITY-R3",
-  "notes": "V3.61.175 TEST version sync for couple P157A Semantic Fidelity R3. General G150A and live general translation behavior are unchanged."
+  "version": "V3.61.176 TEST",
+  "build": "20260926-V3.61.176-TEST-SEMANTIC-FIDELITY-R4",
+  "buildId": "20260926-V3.61.176-TEST-SEMANTIC-FIDELITY-R4",
+  "notes": "V3.61.176 TEST final candidate. General G151A adds only state-breadth preservation; existing G150A semantic rules and live translation plumbing/STT/TTS/network remain unchanged."
 }
