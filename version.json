@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.182",
-  "build": "20260927-V3.61.182-TEST-AUTO-TTS-CONTROL-R1",
-  "buildId": "20260927-V3.61.182-TEST-AUTO-TTS-CONTROL-R1",
-  "notes": "V3.61.182 TEST: automatic TTS control bugfix and diagnostic hardening on V3.61.181. Auto-interpret now respects the Auto Voice Output toggle in husband/wife/general apps; manual Listen remains available. P159A/G151A, translation/backtranslation, STT engine, TTS provider, Relay/fallback and STT/disfluency baseline behavior are otherwise unchanged."
+  "version": "V3.61.183",
+  "build": "20260927-V3.61.183-TEST-STT-DIAG-FIX-R1",
+  "buildId": "20260927-V3.61.183-TEST-STT-DIAG-FIX-R1",
+  "notes": "V3.61.183 TEST: fixes STT diagnostic cleanup bridge ReferenceError and makes Voice/STT diagnostic Stop cancel the active diagnostic request. Also hardens self-check and version metadata. P159A/G151A and live translation/STT/TTS/network behavior remain unchanged."
 }
