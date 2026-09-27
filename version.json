@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.188",
-  "build": "20260927-V3.61.188-TEST-G155A-FIDELITY-R1",
-  "buildId": "20260927-V3.61.188-TEST-G155A-FIDELITY-R1",
-  "notes": "V3.61.188 TEST: V3.61.187 code/STT/UI retained. P159A unchanged. General G155A minimally refines K2L softener semantics, one-event/one-request fidelity, explicit container-unit wording, and Lao target-script purity. SERVICE remains unchanged."
+  "version": "V3.61.189",
+  "build": "20260927-V3.61.189-TEST-G156A-FIDELITY-R1",
+  "buildId": "20260927-V3.61.189-TEST-G156A-FIDELITY-R1",
+  "notes": "V3.61.189 TEST: V3.61.188 code/STT/UI retained. P159A unchanged. General G156A rewrites only the compact K2L fidelity tail to keep one action/request singular, distinguish bottle vs glass/cup, and avoid unstated home/return destinations. SERVICE remains unchanged."
 }
