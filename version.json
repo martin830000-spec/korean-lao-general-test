@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.177 TEST",
-  "build": "20260926-V3.61.177-TEST-SEMANTIC-FIDELITY-R5",
-  "buildId": "20260926-V3.61.177-TEST-SEMANTIC-FIDELITY-R5",
-  "notes": "V3.61.177 TEST package sync. General prompt remains byte-identical G151A; only shared TEST release/version metadata is updated. STT/TTS, live translation plumbing, network and Cloud Run 3.7.18 are unchanged."
+  "version": "V3.61.181",
+  "build": "20260927-V3.61.181-TEST-STT-DIAGNOSTIC-R2",
+  "buildId": "20260927-V3.61.181-TEST-STT-DIAGNOSTIC-R2",
+  "notes": "V3.61.181 TEST: diagnostic-only STT/disfluency regression R2. Rebuilt from the stable V3.61.179 SERVICE baseline plus the R1 diagnostic-only additions, with strict version/build/channel/path cross-checks. P159A/G151A and normal live translation/STT/TTS behavior are unchanged."
 }
