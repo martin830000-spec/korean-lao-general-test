@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.183",
-  "build": "20260927-V3.61.183-TEST-STT-DIAG-FIX-R1",
-  "buildId": "20260927-V3.61.183-TEST-STT-DIAG-FIX-R1",
-  "notes": "V3.61.183 TEST: fixes STT diagnostic cleanup bridge ReferenceError and makes Voice/STT diagnostic Stop cancel the active diagnostic request. Also hardens self-check and version metadata. P159A/G151A and live translation/STT/TTS/network behavior remain unchanged."
+  "version": "V3.61.184",
+  "build": "20260927-V3.61.184-TEST-DIAGNOSTIC-HASH-FIX-R1",
+  "buildId": "20260927-V3.61.184-TEST-DIAGNOSTIC-HASH-FIX-R1",
+  "notes": "V3.61.184 TEST: fixes external diagnostic integrity SHA synchronization so the admin diagnostic window opens. Retains V3.61.183 STT diagnostic cleanup/cancel fixes. P159A/G151A and live translation/backtranslation/STT/TTS/network behavior are unchanged."
 }
