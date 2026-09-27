@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.186",
-  "build": "20260927-V3.61.186-TEST-MULTILANG-STT-G153A-MODAL-R1",
-  "buildId": "20260927-V3.61.186-TEST-MULTILANG-STT-G153A-MODAL-R1",
-  "notes": "V3.61.186 TEST: restores real General-app voice input for EN/ZH/JA/TH via direct Gemini audio STT while preserving KO/LO Chirp STREAM→REST→AI, adds G153A narrow fidelity locks, and replaces native browser alert/confirm popups with in-app dialogs. P159A and SERVICE remain unchanged."
+  "version": "V3.61.187",
+  "build": "20260927-V3.61.187-TEST-STABLE-PARITY-G154A-R1",
+  "buildId": "20260927-V3.61.187-TEST-STABLE-PARITY-G154A-R1",
+  "notes": "V3.61.187 TEST: P159A unchanged; General G154A is compactly rebased on G151A, adaptive 6-language STT selects relay support from /health with AI fallback, native browser alert/confirm are removed from user-facing app paths. SERVICE remains unchanged."
 }
