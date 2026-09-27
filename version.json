@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.181",
-  "build": "20260927-V3.61.181-TEST-STT-DIAGNOSTIC-R2",
-  "buildId": "20260927-V3.61.181-TEST-STT-DIAGNOSTIC-R2",
-  "notes": "V3.61.181 TEST: diagnostic-only STT/disfluency regression R2. Rebuilt from the stable V3.61.179 SERVICE baseline plus the R1 diagnostic-only additions, with strict version/build/channel/path cross-checks. P159A/G151A and normal live translation/STT/TTS behavior are unchanged."
+  "version": "V3.61.182",
+  "build": "20260927-V3.61.182-TEST-AUTO-TTS-CONTROL-R1",
+  "buildId": "20260927-V3.61.182-TEST-AUTO-TTS-CONTROL-R1",
+  "notes": "V3.61.182 TEST: automatic TTS control bugfix and diagnostic hardening on V3.61.181. Auto-interpret now respects the Auto Voice Output toggle in husband/wife/general apps; manual Listen remains available. P159A/G151A, translation/backtranslation, STT engine, TTS provider, Relay/fallback and STT/disfluency baseline behavior are otherwise unchanged."
 }
