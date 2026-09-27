@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.187",
-  "build": "20260927-V3.61.187-TEST-STABLE-PARITY-G154A-R1",
-  "buildId": "20260927-V3.61.187-TEST-STABLE-PARITY-G154A-R1",
-  "notes": "V3.61.187 TEST: P159A unchanged; General G154A is compactly rebased on G151A, adaptive 6-language STT selects relay support from /health with AI fallback, native browser alert/confirm are removed from user-facing app paths. SERVICE remains unchanged."
+  "version": "V3.61.188",
+  "build": "20260927-V3.61.188-TEST-G155A-FIDELITY-R1",
+  "buildId": "20260927-V3.61.188-TEST-G155A-FIDELITY-R1",
+  "notes": "V3.61.188 TEST: V3.61.187 code/STT/UI retained. P159A unchanged. General G155A minimally refines K2L softener semantics, one-event/one-request fidelity, explicit container-unit wording, and Lao target-script purity. SERVICE remains unchanged."
 }
