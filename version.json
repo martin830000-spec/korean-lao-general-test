@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.184",
-  "build": "20260927-V3.61.184-TEST-DIAGNOSTIC-HASH-FIX-R1",
-  "buildId": "20260927-V3.61.184-TEST-DIAGNOSTIC-HASH-FIX-R1",
-  "notes": "V3.61.184 TEST: fixes external diagnostic integrity SHA synchronization so the admin diagnostic window opens. Retains V3.61.183 STT diagnostic cleanup/cancel fixes. P159A/G151A and live translation/backtranslation/STT/TTS/network behavior are unchanged."
+  "version": "V3.61.185",
+  "build": "20260927-V3.61.185-TEST-STT-CLEANUP-G152A-R1",
+  "buildId": "20260927-V3.61.185-TEST-STT-CLEANUP-G152A-R1",
+  "notes": "V3.61.185 TEST: multilingual STT disfluency/self-repair cleanup (KO/LO/EN/ZH/JA/TH), couple-app KO/LO voice cleanup, General G152A brevity/information-density and time-relation fidelity, expanded voice regression diagnostics. P159A and network/relay/STT fallback/TTS cores remain unchanged."
 }
