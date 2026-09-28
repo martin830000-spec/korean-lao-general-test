@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.191",
-  "build": "20260928-V3.61.191-TEST-CRITICAL-REVIEW-R1",
-  "buildId": "20260928-V3.61.191-TEST-CRITICAL-REVIEW-R1",
-  "notes": "V3.61.191 TEST: G157A/P159A prompts frozen. General adds deterministic critical-output user-review warning for meta leakage, severe expansion, and clear target-script failures. No automatic retranslation; only user retry. Critical review suppresses automatic TTS for that result. STT/TTS/Relay/multilingual routing otherwise unchanged."
+  "version": "V3.61.192",
+  "build": "20260928-V3.61.192-TEST-DIAGNOSTIC-SHA-FIX-R1",
+  "buildId": "20260928-V3.61.192-TEST-DIAGNOSTIC-SHA-FIX-R1",
+  "notes": "V3.61.192 TEST: V3.61.191 critical-review behavior is unchanged. This build fixes external diagnostic integrity SHA synchronization only. P159A/G157A prompts, translation/back-translation, STT/TTS, Relay/Cloudflare, multilingual routing, UI/UX, and user-retry policy are unchanged."
 }
