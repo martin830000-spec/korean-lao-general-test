@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.194",
-  "build": "20260928-V3.61.194-TEST-STRUCTURE-REBUILD-R1",
-  "buildId": "20260928-V3.61.194-TEST-STRUCTURE-REBUILD-R1",
-  "notes": "V3.61.194 TEST STRUCTURE REBUILD R1: runtime behavior is frozen to validated V3.61.193. Source/build architecture is modularized at build time; generated browser artifacts retain bundled classic-script semantics, routes, storage keys, postMessage contracts, prompts, STT/TTS and Relay/fallback behavior."
+  "version": "V3.61.195",
+  "build": "20260929-V3.61.195-TEST-STRUCTURE-REBUILD-R2",
+  "buildId": "20260929-V3.61.195-TEST-STRUCTURE-REBUILD-R2",
+  "notes": "V3.61.195 TEST STRUCTURE REBUILD R2: V3.61.194 modular structure retained. Fixes readiness handshake, Couple STT cleanup typing, manual update-history click binding, translate-during-STT guard, and STT readiness visual UX. P159A/G157A prompts, translation/backtranslation algorithms, TTS and Relay/fallback remain unchanged."
 }
