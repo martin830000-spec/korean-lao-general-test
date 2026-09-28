@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.189",
-  "build": "20260927-V3.61.189-TEST-G156A-FIDELITY-R1",
-  "buildId": "20260927-V3.61.189-TEST-G156A-FIDELITY-R1",
-  "notes": "V3.61.189 TEST: V3.61.188 code/STT/UI retained. P159A unchanged. General G156A rewrites only the compact K2L fidelity tail to keep one action/request singular, distinguish bottle vs glass/cup, and avoid unstated home/return destinations. SERVICE remains unchanged."
+  "version": "V3.61.190",
+  "build": "20260928-V3.61.190-TEST-G157A-FIDELITY-R1",
+  "buildId": "20260928-V3.61.190-TEST-G157A-FIDELITY-R1",
+  "notes": "V3.61.190 TEST: V3.61.189 code/STT/UI retained. P159A unchanged. General G157A tightens one-action K→L fidelity and back-translation register parity/single-reading output. SERVICE remains unchanged."
 }
