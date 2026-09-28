@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.193",
-  "build": "20260928-V3.61.193-TEST-STABILIZATION-R1",
-  "buildId": "20260928-V3.61.193-TEST-STABILIZATION-R1",
-  "notes": "V3.61.193 TEST: stabilization-only over V3.61.192. General runtime/version BUILD is synchronized; the diagnostic top-level seeds the existing main-app Gemini/Relay credentials into its own General diagnostic session; General auto-update is held only inside that diagnostic session to prevent iframe shutdown races. P159A/G157A prompts, translation/back-translation, real STT/TTS, Relay/Cloudflare routes, UI/UX, storage namespaces and TEST/SERVICE URLs are unchanged."
+  "version": "V3.61.194",
+  "build": "20260928-V3.61.194-TEST-STRUCTURE-REBUILD-R1",
+  "buildId": "20260928-V3.61.194-TEST-STRUCTURE-REBUILD-R1",
+  "notes": "V3.61.194 TEST STRUCTURE REBUILD R1: runtime behavior is frozen to validated V3.61.193. Source/build architecture is modularized at build time; generated browser artifacts retain bundled classic-script semantics, routes, storage keys, postMessage contracts, prompts, STT/TTS and Relay/fallback behavior."
 }
