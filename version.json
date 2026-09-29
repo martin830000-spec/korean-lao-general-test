@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.195",
-  "build": "20260929-V3.61.195-TEST-STRUCTURE-REBUILD-R2",
-  "buildId": "20260929-V3.61.195-TEST-STRUCTURE-REBUILD-R2",
-  "notes": "V3.61.195 TEST STRUCTURE REBUILD R2: V3.61.194 modular structure retained. Fixes readiness handshake, Couple STT cleanup typing, manual update-history click binding, translate-during-STT guard, and STT readiness visual UX. P159A/G157A prompts, translation/backtranslation algorithms, TTS and Relay/fallback remain unchanged."
+  "version": "V3.61.196",
+  "build": "20260929-V3.61.196-TEST-STRUCTURE-REBUILD-R3",
+  "buildId": "20260929-V3.61.196-TEST-STRUCTURE-REBUILD-R3",
+  "notes": "V3.61.196 TEST STRUCTURE REBUILD R3: V3.61.195 modular structure retained. Aligns Couple/General STT state behavior: cancelable preparation with capture-ready watchdog, Couple timer starting at actual capture-ready, fixed listening guidance, translate-during-STT protection, conservative no-speech handling, and Korean/Lao AI-fallback suppression when local audio has no speech-like evidence. P159A/G157A prompts, translation/backtranslation algorithms, TTS and Relay routing remain unchanged."
 }
