@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.198",
-  "build": "20260929-V3.61.198-TEST-RETRANSLATION-TELEMETRY-R1",
-  "buildId": "20260929-V3.61.198-TEST-RETRANSLATION-TELEMETRY-R1",
-  "notes": "V3.61.198 TEST RETRANSLATION TELEMETRY R1: V3.61.197 behavior retained. Reuses the existing parentTraceId/runtime.userRetry telemetry contract to link retranslation attempts, extends General to emit the same retry lineage, and folds retranslation rate/filter/quality-target analysis into existing Usage, Translation Records and Quality Compare screens without adding a new diagnostic category. No Cloud Run schema change is required. Retranslation remains a human-review signal, not an automatic failure label. P159A/G157A prompts, translation/backtranslation algorithms, STT/TTS behavior and Relay routing remain unchanged."
+  "version": "V3.61.199",
+  "build": "20260929-V3.61.199-TEST-MEANING-INVARIANT-R1",
+  "buildId": "20260929-V3.61.199-TEST-MEANING-INVARIANT-R1",
+  "notes": "V3.61.199 TEST MEANING INVARIANT R1: P160A/G158A strengthen event-state/time precision and semantic breadth/identity while retaining one-call forward translation. Couple L2K READ SMART is enabled only for long/multi-clause Lao. Husband back-translation uses only the displayed Lao as meaning/register evidence while still producing natural, easy-to-read Korean grammar. Semantic heuristics remain diagnostic telemetry but no longer create user-visible advisory labels or lower the user-facing integrity score. Strong warnings remain for objective output corruption and explicit yesterday↔tomorrow reversal. STT/TTS, Relay/Cloudflare/Cloud Run, retranslation telemetry and SERVICE V3.61.193 remain unchanged."
 }
