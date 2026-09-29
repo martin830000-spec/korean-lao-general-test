@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.197",
-  "build": "20260929-V3.61.197-TEST-STRUCTURE-REBUILD-R4",
-  "buildId": "20260929-V3.61.197-TEST-STRUCTURE-REBUILD-R4",
-  "notes": "V3.61.197 TEST STRUCTURE REBUILD R4: V3.61.196 modular structure retained. Completes Couple/General STT/TTS interaction parity: General capture-ready timer and stop-time label, stable Couple listening card beyond one minute, visible General fallback recovery progress, corrected recovery labeling, valid Couple STT cancellation on clear/recall/focus, General translation-to-STT guard with TTS stop, and STT-to-TTS replay guards. P159A/G157A prompts, translation/backtranslation algorithms, STT recognition/fallback thresholds, TTS providers and Relay routing remain unchanged."
+  "version": "V3.61.198",
+  "build": "20260929-V3.61.198-TEST-RETRANSLATION-TELEMETRY-R1",
+  "buildId": "20260929-V3.61.198-TEST-RETRANSLATION-TELEMETRY-R1",
+  "notes": "V3.61.198 TEST RETRANSLATION TELEMETRY R1: V3.61.197 behavior retained. Reuses the existing parentTraceId/runtime.userRetry telemetry contract to link retranslation attempts, extends General to emit the same retry lineage, and folds retranslation rate/filter/quality-target analysis into existing Usage, Translation Records and Quality Compare screens without adding a new diagnostic category. No Cloud Run schema change is required. Retranslation remains a human-review signal, not an automatic failure label. P159A/G157A prompts, translation/backtranslation algorithms, STT/TTS behavior and Relay routing remain unchanged."
 }
