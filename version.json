@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.196",
-  "build": "20260929-V3.61.196-TEST-STRUCTURE-REBUILD-R3",
-  "buildId": "20260929-V3.61.196-TEST-STRUCTURE-REBUILD-R3",
-  "notes": "V3.61.196 TEST STRUCTURE REBUILD R3: V3.61.195 modular structure retained. Aligns Couple/General STT state behavior: cancelable preparation with capture-ready watchdog, Couple timer starting at actual capture-ready, fixed listening guidance, translate-during-STT protection, conservative no-speech handling, and Korean/Lao AI-fallback suppression when local audio has no speech-like evidence. P159A/G157A prompts, translation/backtranslation algorithms, TTS and Relay routing remain unchanged."
+  "version": "V3.61.197",
+  "build": "20260929-V3.61.197-TEST-STRUCTURE-REBUILD-R4",
+  "buildId": "20260929-V3.61.197-TEST-STRUCTURE-REBUILD-R4",
+  "notes": "V3.61.197 TEST STRUCTURE REBUILD R4: V3.61.196 modular structure retained. Completes Couple/General STT/TTS interaction parity: General capture-ready timer and stop-time label, stable Couple listening card beyond one minute, visible General fallback recovery progress, corrected recovery labeling, valid Couple STT cancellation on clear/recall/focus, General translation-to-STT guard with TTS stop, and STT-to-TTS replay guards. P159A/G157A prompts, translation/backtranslation algorithms, STT recognition/fallback thresholds, TTS providers and Relay routing remain unchanged."
 }
