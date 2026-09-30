@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.204",
-  "build": "20260930-V3.61.204-TEST-GOOGLE-STT-RESULT-INDEX-R1",
-  "buildId": "20260930-V3.61.204-TEST-GOOGLE-STT-RESULT-INDEX-R1",
-  "notes": "V3.61.204 TEST GOOGLE STT RESULT INDEX R1: based on V3.61.203 TEST. Husband Google STT now tracks SpeechRecognition final results by result index and commits each recognizer only once, preventing previously-final result slots from being appended again when Android Chrome re-emits the full results list. True repeated speech in different slots is preserved. Manual Start/Stop authority, no timeout/silence auto-translation, Chirp 3 default/core, Wife/General STT, translation/back-translation/SMART, P160A/G158A, TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged."
+  "version": "V3.61.205",
+  "build": "20260930-V3.61.205-TEST-GOOGLE-STT-LIVE-CANONICAL-R1",
+  "buildId": "20260930-V3.61.205-TEST-GOOGLE-STT-LIVE-CANONICAL-R1",
+  "notes": "V3.61.205 TEST GOOGLE STT LIVE CANONICAL R1: based on V3.61.204 TEST. Husband Google STT now renders interim/final text as live preview while maintaining one canonical final transcript. Distinct cumulative result slots A→A+B→A+B+C are folded as snapshots, and deterministic restart-boundary overlap prevents cross-restart replay from snowballing. Manual Stop is still the only normal completion/auto-translate authority. Chirp 3 default/core, Wife/General STT, translation/back-translation/SMART, P160A/G158A, TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged. Android/Chrome system beep/silence endpoint behavior is unchanged."
 }
