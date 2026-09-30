@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.202",
-  "build": "20260930-V3.61.202-TEST-ENV-MANUAL-SYNC-R1",
-  "buildId": "20260930-V3.61.202-TEST-ENV-MANUAL-SYNC-R1",
-  "notes": "V3.61.202 TEST ENV/MANUAL SYNC R1: based on V3.61.201. Version headers now show version + deployment channel on two centered lines. General deployment label/telemetry derive from the build channel instead of hardcoded TEST. General manual wording and screenshot are synchronized to the current 통역 언어 UI; Couple manual documents large-view and 180-degree rotation. Legacy visible version fallbacks are removed. Translation/back-translation/SMART, P160A/G158A, STT/TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged."
+  "version": "V3.61.203",
+  "build": "20260930-V3.61.203-TEST-ANDROID-GOOGLE-STT-R1",
+  "buildId": "20260930-V3.61.203-TEST-ANDROID-GOOGLE-STT-R1",
+  "notes": "V3.61.203 TEST ANDROID GOOGLE STT R1: based on V3.61.202. Husband TEST adds a bottom Chirp 3 / Google STT selector above the connection-route control. Chirp 3 remains default and its existing stream/REST/AI recovery code is unchanged. Google STT uses Android/Chrome SpeechRecognition for Korean input while preserving manual start/stop UX: browser silence/end/timeout never triggers translation, natural recognizer end is internally restarted, and auto-translation is allowed once only after user Stop and normal finalization. Wife/General STT, translation/back-translation/SMART, P160A/G158A, TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged."
 }
