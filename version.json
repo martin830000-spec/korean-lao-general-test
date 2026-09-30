@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.200",
-  "build": "20260930-V3.61.200-TEST-GENERAL-TRANSIENT-UI-RESET-R1",
-  "buildId": "20260930-V3.61.200-TEST-GENERAL-TRANSIENT-UI-RESET-R1",
-  "notes": "V3.61.200 TEST GENERAL TRANSIENT UI RESET R1: P160A/G158A and translation/STT/TTS/network/retranslation behavior are unchanged from V3.61.199. General recent-conversation expanded/collapsed state is no longer persisted; initial/update/app-return entry starts collapsed. BFCache restore also collapses verification and recent history, closes manual/fullscreen transient UI, and resets scroll to top while preserving history contents, persistent toggles, user mode, partner language and update input checkpoint. SERVICE V3.61.193, Cloud Run 3.7.17, Cloudflare and Relay remain unchanged."
+  "version": "V3.61.201",
+  "build": "20260930-V3.61.201-TEST-PRE-SERVICE-CLEANUP-R1",
+  "buildId": "20260930-V3.61.201-TEST-PRE-SERVICE-CLEANUP-R1",
+  "notes": "V3.61.201 TEST PRE-SERVICE CLEANUP R1: based on V3.61.200. General transient reset now also closes release-notice/update-history overlays without writing the release seen state. Couple quality-warning help text now matches P160A: user-visible warnings are for high-confidence output-integrity failures; semantic heuristics remain diagnostic-only. Translation/back-translation/SMART, P160A/G158A, STT/TTS, Relay/Cloudflare/Cloud Run and retranslation telemetry are unchanged. SERVICE V3.61.193 remains untouched pending TEST smoke."
 }
