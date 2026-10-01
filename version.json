@@ -1,6 +1,6 @@
 {
-  "version": "V3.61.206",
-  "build": "20260930-V3.61.206-TEST-GOOGLE-STT-SNAPSHOT-MERGE-R2",
-  "buildId": "20260930-V3.61.206-TEST-GOOGLE-STT-SNAPSHOT-MERGE-R2",
-  "notes": "V3.61.206 TEST GOOGLE STT SNAPSHOT MERGE R2: based on V3.61.205 TEST. V205 live interim/final preview is preserved. Android Chrome exact duplicate final slots and cumulative snapshot slots are folded into one canonical transcript, and deterministic short exact overlap is removed at result/restart boundaries to prevent repeated-text snowballing. Manual Stop remains the only normal completion/auto-translate authority. Chirp 3 default/core, Wife/General STT, translation/back-translation/SMART, P160A/G158A, TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged. Android/Chrome system beep/silence endpoint behavior is unchanged."
+  "version": "V3.61.202",
+  "build": "20260930-V3.61.202-TEST-ENV-MANUAL-SYNC-R1",
+  "buildId": "20260930-V3.61.202-TEST-ENV-MANUAL-SYNC-R1",
+  "notes": "V3.61.202 TEST ENV/MANUAL SYNC R1: based on V3.61.201. Version headers now show version + deployment channel on two centered lines. General deployment label/telemetry derive from the build channel instead of hardcoded TEST. General manual wording and screenshot are synchronized to the current 통역 언어 UI; Couple manual documents large-view and 180-degree rotation. Legacy visible version fallbacks are removed. Translation/back-translation/SMART, P160A/G158A, STT/TTS, Relay/Cloudflare/Cloud Run and retranslation behavior are unchanged."
 }
