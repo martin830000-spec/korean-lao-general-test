@@ -316,7 +316,7 @@ body.unified-booting .shell,body.unified-booting #authScreen{visibility:hidden}
   </div>
   <div class="stage"><iframe id="generalFrame" class="mode-frame active" title="일상 다국어 통역" allow="microphone; autoplay; clipboard-write" data-loaded="0"></iframe><div id="loadingMask" class="loading-mask show">통역기를 여는 중...</div></div>
 </div>
-<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="5256eb32ef6631261005345fb1e4c082bb5dafecea22ac518abf5e93cdc09a60">&lt;!doctype html&gt;
+<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="04e86b4989bb9471bbb0464eae6a2849c55c8d0404ce0c31eca4ca02a86ac09c">&lt;!doctype html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
@@ -924,7 +924,7 @@ body.result-focus .output-card.ui-combined-result .ui-source-preview-text{color:
 &lt;script&gt;
 'use strict';
 const APP_VERSION='V3.61.202';
-const BUILD_ID='20261014-V3.61.202-TEST-VOICE-IME-R3';
+const BUILD_ID='20261014-V3.61.202-TEST-VOICE-UI-R2';
 const APP_DEPLOYMENT_CHANNEL='TEST';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
@@ -1465,64 +1465,12 @@ state.history=readHistory().slice(0,50);syncPersistentToggleStateFromStorage();r
   setInterval(sync,1200);
 })();
 &lt;/script&gt;
-&lt;script id="android-ime-return-r3"&gt;
-(function installAndroidVoiceImeReturnR3(){
-  'use strict';
-  if(window.__androidVoiceImeReturnR3 || !/Android/i.test(String(navigator.userAgent||''))) return;
-  const input=document.getElementById('input');
-  const header=document.querySelector('.input-section-head');
-  if(!input||!header)return;
-  window.__androidVoiceImeReturnR3=true;
-  const isLao=(typeof uiLang==='function'&amp;&amp;uiLang()==='lo');
-  const button=document.createElement('button');
-  button.id='androidImeKeyboardBtnR3';
-  button.type='button';
-  button.className='android-ime-keyboard-btn-r3';
-  button.textContent=isLao?'⌨ ແປ້ນພິມ':'⌨ 자판';
-  button.setAttribute('aria-label',isLao?'ລອງກັບໄປໃຊ້ແປ້ນພິມ':'일반 자판으로 전환 시도');
-  button.title=isLao?'ຖ້າບໍ່ປ່ຽນ ກົດລູກສອນກັບຢູ່ຈໍຮັບສຽງ Google':'전환되지 않으면 Google 음성입력 화면의 왼쪽 화살표를 누르세요.';
-  const css=document.createElement('style');
-  css.id='android-ime-keyboard-style-r3';
-  css.textContent='.android-ime-keyboard-btn-r3{flex:0 0 auto;white-space:nowrap;min-height:34px;padding:5px 7px;font-size:11px;font-weight:800;color:#334155;background:#edf3fa;border:1px solid #ccd6e0;border-radius:8px;cursor:pointer;touch-action:manipulation;margin-left:auto}.android-ime-keyboard-btn-r3:active{background:#dbeafe}';
-  document.head.appendChild(css);
-  const clear=header.querySelector('button');
-  if(clear)header.insertBefore(button,clear);else header.appendChild(button);
-  let lastValue=String(input.value||''),possibleVoiceUntil=0,touchPending=false,composing=false;
-  function tryKeyboardReturn(){
-    // Android IME cannot be switched by a web page; this is a single best-effort focus refresh.
-    possibleVoiceUntil=0;touchPending=false;
-    const start=input.selectionStart,end=input.selectionEnd;
-    try{input.blur()}catch(_){}
-    try{navigator.virtualKeyboard?.hide?.()}catch(_){}
-    try{input.focus({preventScroll:true})}catch(_){try{input.focus()}catch(__){}}
-    try{if(typeof start==='number'&amp;&amp;typeof end==='number'&amp;&amp;document.activeElement===input)input.setSelectionRange(start,end)}catch(_){}
-  }
-  input.addEventListener('compositionstart',()=&gt;{composing=true;possibleVoiceUntil=0;});
-  input.addEventListener('compositionend',()=&gt;{composing=false;lastValue=String(input.value||'');});
-  input.addEventListener('input',e=&gt;{
-    const next=String(input.value||''),kind=String(e.inputType||''),added=String(e.data||'');
-    // No API can identify Google dictation: only trusted, non-paste bulk insertion is treated as a clue.
-    if(e.isTrusted===true&amp;&amp;!composing&amp;&amp;!e.isComposing&amp;&amp;!/paste|drop|history|delete/i.test(kind)&amp;&amp;
-       (/dictat|speech/i.test(kind)||(/insert/i.test(kind)&amp;&amp;
-       ((added.length&gt;=8&amp;&amp;/\s/.test(added))||(next.length-lastValue.length&gt;=8&amp;&amp;/\s/.test(next)))))){
-      possibleVoiceUntil=Date.now()+30000;
-    }
-    lastValue=next;
-  });
-  input.addEventListener('pointerdown',e=&gt;{touchPending=e.isPrimary!==false&amp;&amp;e.pointerType==='touch';},{passive:true});
-  input.addEventListener('click',()=&gt;{
-    if(touchPending&amp;&amp;document.activeElement===input&amp;&amp;Date.now()&lt;possibleVoiceUntil)tryKeyboardReturn();
-    touchPending=false;
-  });
-  button.addEventListener('click',e=&gt;{e.preventDefault();tryKeyboardReturn()});
-})();
-&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 <script>
 const GENERAL_VERSION="V3.61.202";
-const GENERAL_BUILD="20261014-V3.61.202-TEST-VOICE-IME-R3";
+const GENERAL_BUILD="20261014-V3.61.202-TEST-VOICE-UI-R2";
 const GENERAL_DISPLAY_VERSION=GENERAL_VERSION.replace(/\s+TEST$/,'');
 const shellVersionEl=document.getElementById('shellVersion');if(shellVersionEl){const n=shellVersionEl.querySelector('.shell-version-number'),c=shellVersionEl.querySelector('.shell-version-channel');if(n)n.textContent=GENERAL_DISPLAY_VERSION;if(c)c.textContent='TEST';shellVersionEl.setAttribute('data-channel','TEST')}
 // V3.61.200 / G158A: transient-UI reset only; prompt/live-call plumbing unchanged.

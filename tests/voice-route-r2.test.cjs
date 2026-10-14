@@ -4,11 +4,11 @@ const {test}=require('node:test');
 const shell=fs.readFileSync('index.html','utf8'),decode=s=>s.replace(/&(?:#x([0-9a-f]+)|#([0-9]+)|lt|gt|amp|quot|apos);/gi,(ent,h,d)=>h?String.fromCodePoint(parseInt(h,16)):d?String.fromCodePoint(Number(d)):({'&lt;':'<','&gt;':'>','&amp;':'&','&quot;':'"','&apos;':"'"})[ent.toLowerCase()]||ent);
 const match=shell.match(/<textarea id="payload-general"[^>]*data-sha256="([a-f0-9]{64})"[^>]*>/);assert.ok(match);const start=match.index+match[0].length,end=shell.indexOf('</textarea>',start),src=decode(shell.slice(start,end));
 const slice=(a,b)=>{const i=src.indexOf(a),j=src.indexOf(b,i+a.length);assert.ok(i>=0&&j>i,a);return src.slice(i,j)};
-test('R3 general app embedded SHA, JavaScript syntax, and version match',()=>{
+test('R2 general app embedded SHA, JavaScript syntax, and version match',()=>{
 assert.equal(crypto.createHash('sha256').update(src).digest('hex'),match[1]);
 for(const m of [...src.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)])if(!/\btype\s*=\s*['"](?:application\/json|text\/plain)['"]/i.test(m[1]))new vm.Script(m[2]);
-assert.match(src,/const BUILD_ID='20261014-V3\.61\.202-TEST-VOICE-IME-R3'/);
-assert.match(shell,/const GENERAL_BUILD="20261014-V3\.61\.202-TEST-VOICE-IME-R3"/);
+assert.match(src,/const BUILD_ID='20261014-V3\.61\.202-TEST-VOICE-UI-R2'/);
+assert.match(shell,/const GENERAL_BUILD="20261014-V3\.61\.202-TEST-VOICE-UI-R2"/);
 });
 test('R2 general network controls are informational and preserve direct Gemini single-pass',()=>{
 assert.match(src,/class="route-mode" style="display:none"/);

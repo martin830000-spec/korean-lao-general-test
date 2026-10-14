@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - test/text-direct-voice-route-ui-r2-20261014
-      - test/android-google-ime-keyboard-return-r3-20261014
+      - test/rollback-r3-to-r2-20261015-r1
       - main
   workflow_dispatch:
 permissions:
