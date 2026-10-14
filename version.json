@@ -1,6 +1,6 @@
 {
   "version": "V3.61.202",
-  "build": "20261014-V3.61.202-TEST-TEXT-DIRECT-R1",
-  "buildId": "20261014-V3.61.202-TEST-TEXT-DIRECT-R1",
-  "notes": "TEST deployed 2026-10-14: husband/wife/general translation and independent back-translation directly call Gemini once with LOW; no automatic Cloudflare/Cloud Run generation fallback. STT/TTS husband Cloud Run primary; wife Cloudflare primary, existing voice recovery paths retained. Prompts and SERVICE unchanged; real-device Korea/Laos connectivity/performance validation pending."
+  "build": "20261014-V3.61.202-TEST-TEXT-DIRECT-UI-R2",
+  "buildId": "20261014-V3.61.202-TEST-TEXT-DIRECT-UI-R2",
+  "notes": "QA R2 STAGING ONLY; public TEST R1 and SERVICE unchanged. Network labels accurately state Gemini direct text forward/back + husband Cloud Run voice / wife Cloudflare voice primary. Obsolete text route override controls hidden; no translation prompt, STT/TTS processing, relay, storage/DB or API behavior change. General STT direct-audio fallback remains an explicitly unresolved separate policy audit before promotion."
 }
