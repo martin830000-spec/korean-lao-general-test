@@ -11,13 +11,13 @@ assert.match(src,/const BUILD_ID='20261014-V3\.61\.202-TEST-VOICE-UI-R2'/);
 assert.match(shell,/const GENERAL_BUILD="20261014-V3\.61\.202-TEST-VOICE-UI-R2"/);
 });
 test('R2 general network controls are informational and preserve direct Gemini single-pass',()=>{
-assert.match(src,/class="route-mode" style="display:none"/);
+assert.match(src,/class="route-mode"><button/);
 assert.match(src,/function updateNetworkRouteUi\(/);
 assert.match(src,/async function directGemini\(/);
 assert.match(src,/function directAudioTranscribe\(/);
 });
 test('R2 general wife audio routes ignore custom Relay and unreachable direct Cloud Run',()=>{
-const mock={state:{userMode:'wife',relayUrl:'https://custom.example'},SEOUL_RELAY:'https://seoul.example',BANGKOK_RELAY:'https://bkk.example',CLOUDFLARE_RELAY:'https://cf.example',networkFeature:()=> 'stt',networkPreferred:()=> 'cloudflare',timezoneCloudflareFirst:()=>true};
+const mock={state:{userMode:'wife',relayUrl:'https://custom.example'},SEOUL_RELAY:'https://seoul.example',BANGKOK_RELAY:'https://bkk.example',CLOUDFLARE_RELAY:'https://cf.example',networkFeature:()=> 'stt',networkPreferred:()=> 'cloudflare',networkRouteMode:()=> 'auto',timezoneCloudflareFirst:()=>true};
 const ctx=vm.createContext(mock);vm.runInContext(slice('function relayRoutes(path=','function relayUrl('),ctx);
 const routes=vm.runInContext('relayRoutes("/transcribe")',ctx);assert.equal(routes.length,1);assert.equal(routes[0].base,'https://cf.example');assert.equal(routes[0].via,'cloudflare');
 });
