@@ -4,6 +4,7 @@ on:
     branches:
       - test/text-direct-voice-route-ui-r2-20261014
       - test/android-google-ime-keyboard-return-r3-20261014
+      - main
   workflow_dispatch:
 permissions:
   contents: read
