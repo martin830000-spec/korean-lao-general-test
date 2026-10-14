@@ -1,6 +1,6 @@
 {
   "version": "V3.61.202",
-  "build": "20261014-V3.61.202-TEST-VOICE-UI-R2",
-  "buildId": "20261014-V3.61.202-TEST-VOICE-UI-R2",
-  "notes": "STAGING ONLY (NOT Pages deployed) — 2026-10-14 R2 follow-up. Direct Gemini one-pass text unchanged; historical route-selection UI now informational; husband voice Cloud Run primary; wife voice Cloudflare-only to avoid unreachable direct Cloud Run; custom general Relay no longer overrides speech priority. General unsupported native-STT languages retain direct Gemini speech path pending live backend endpoint verification. Existing prompts/LOW and SERVICE preserved."
+  "build": "20261014-V3.61.202-TEST-VOICE-IME-R3",
+  "buildId": "20261014-V3.61.202-TEST-VOICE-IME-R3",
+  "notes": "TEST R3 isolated candidate (not Pages main / not SERVICE): Android Google voice keyboard focus return experiment. Recent trusted bulk dictation-like text + next focused input tap or explicit compact keyboard button performs best-effort blur/VirtualKeyboard.hide/focus. No OS IME-switch guarantee. Existing R2 voice relay routing, text Gemini Single Pass, LOW, prompts and storage unchanged. No paid API calls. Real Galaxy/Gboard and Laos device testing PENDING."
 }
