@@ -1,6 +1,6 @@
 {
   "version": "V3.61.202",
-  "build": "20261014-V3.61.202-TEST-TEXT-DIRECT-R1",
-  "buildId": "20261014-V3.61.202-TEST-TEXT-DIRECT-R1",
-  "notes": "TEST deployed 2026-10-14: husband/wife/general translation and independent back-translation directly call Gemini once with LOW; no automatic Cloudflare/Cloud Run generation fallback. STT/TTS husband Cloud Run primary; wife Cloudflare primary, existing voice recovery paths retained. Prompts and SERVICE unchanged; real-device Korea/Laos connectivity/performance validation pending."
+  "build": "20261014-V3.61.202-TEST-ROUTE-UI-R2",
+  "buildId": "20261014-V3.61.202-TEST-ROUTE-UI-R2",
+  "notes": "TEST candidate only, not deployed. Network settings copy reflects existing direct Gemini text forward/back and mode-specific Cloud Run/Cloudflare-first STT/TTS. Legacy network preference controls hidden but config/history keys preserved. General multilingual STT fallback to direct Gemini remains unchanged, awaiting server support validation. Runtime translation prompts, model, LOW, STT/TTS transport and SERVICE unchanged."
 }
