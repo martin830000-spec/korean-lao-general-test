@@ -7,8 +7,8 @@ const slice=(a,b)=>{const i=src.indexOf(a),j=src.indexOf(b,i+a.length);assert.ok
 test('R2 general app embedded SHA, JavaScript syntax, and version match',()=>{
 assert.equal(crypto.createHash('sha256').update(src).digest('hex'),match[1]);
 for(const m of [...src.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)])if(!/\btype\s*=\s*['"](?:application\/json|text\/plain)['"]/i.test(m[1]))new vm.Script(m[2]);
-assert.match(src,/const BUILD_ID='20261014-V3\.61\.202-TEST-VOICE-UI-R2'/);
-assert.match(shell,/const GENERAL_BUILD="20261014-V3\.61\.202-TEST-VOICE-UI-R2"/);
+assert.match(src,/const BUILD_ID='20261015-V3\.61\.202-TEST-ROUTE-PARITY-R1'/);
+assert.match(shell,/const GENERAL_BUILD="20261015-V3\.61\.202-TEST-ROUTE-PARITY-R1"/);
 });
 test('R2 general network controls are informational and preserve direct Gemini single-pass',()=>{
 assert.match(src,/class="route-mode"><button/);
