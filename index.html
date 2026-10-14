@@ -316,7 +316,7 @@ body.unified-booting .shell,body.unified-booting #authScreen{visibility:hidden}
   </div>
   <div class="stage"><iframe id="generalFrame" class="mode-frame active" title="일상 다국어 통역" allow="microphone; autoplay; clipboard-write" data-loaded="0"></iframe><div id="loadingMask" class="loading-mask show">통역기를 여는 중...</div></div>
 </div>
-<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="8a9a1e7ca68b32cb1b760f7ed5063de4e208e7a6e2b6fba94919bcceddc72d41">&lt;!doctype html&gt;
+<textarea id="payload-general" hidden aria-hidden="true" tabindex="-1" data-kind="general" data-sha256="4d576c61f7ebe5272164bd1e77662a4fbdcf03882b41f1cab7bc66d2b85b5415">&lt;!doctype html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
@@ -861,7 +861,7 @@ body.result-focus .output-card.ui-combined-result .ui-source-preview-text{color:
     &lt;div class="settings-grid"&gt;&lt;input id="relayUrlInput" type="url" inputmode="url" autocomplete="off" placeholder="선택사항: 현재 탭용 Relay URL"&gt;&lt;input id="relayTokenInput" type="password" autocomplete="off" placeholder="현재 탭용 App Token 임시값"&gt;&lt;/div&gt;
     &lt;div class="actions" style="margin-top:7px"&gt;&lt;button class="btn primary" id="saveSttBtn"&gt;음성 세션 적용&lt;/button&gt;&lt;button class="btn secondary" id="testSttBtn"&gt;Relay 연결 테스트&lt;/button&gt;&lt;/div&gt;
     &lt;div class="section-head" style="margin-top:12px"&gt;&lt;div class="section-title" id="routeSettingsTitle"&gt;연결 방식&lt;/div&gt;&lt;div class="mini-state" id="networkRouteSummary"&gt;자동&lt;/div&gt;&lt;/div&gt;
-    &lt;div class="route-mode"&gt;&lt;button type="button" id="networkModeAuto"&gt;자동&lt;/button&gt;&lt;button type="button" id="networkModeDirect"&gt;직접 우선&lt;/button&gt;&lt;button type="button" id="networkModeCloudflare"&gt;우회 우선&lt;/button&gt;&lt;/div&gt;
+    &lt;div class="route-mode" style="display:none" aria-hidden="true"&gt;&lt;button type="button" id="networkModeAuto"&gt;자동&lt;/button&gt;&lt;button type="button" id="networkModeDirect"&gt;직접 우선&lt;/button&gt;&lt;button type="button" id="networkModeCloudflare"&gt;우회 우선&lt;/button&gt;&lt;/div&gt;
     &lt;div class="route-hint" id="networkRouteHint"&gt;최근 실제 성공 경로와 현재 지역을 기준으로 자동 선택합니다.&lt;/div&gt;
     &lt;div class="actions" style="margin-top:7px"&gt;&lt;button class="btn secondary" id="clearOverridesBtn"&gt;세션 임시값 지우기&lt;/button&gt;&lt;button class="btn secondary" id="diagnosticBtn"&gt;🧪 통합 진단 열기&lt;/button&gt;&lt;/div&gt;
   &lt;/section&gt;
@@ -924,7 +924,7 @@ body.result-focus .output-card.ui-combined-result .ui-source-preview-text{color:
 &lt;script&gt;
 'use strict';
 const APP_VERSION='V3.61.202';
-const BUILD_ID='20261014-V3.61.202-TEST-TEXT-DIRECT-R1';
+const BUILD_ID='20261014-V3.61.202-TEST-ROUTE-UI-R2';
 const APP_DEPLOYMENT_CHANNEL='TEST';
 const MODEL='gemini-3.8-flash';
 const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
@@ -1132,7 +1132,10 @@ function networkFeature(path=''){const p=String(path||'').toLowerCase();if(p.inc
 function networkPreferred(feature='relay'){if(feature==='stt'||feature==='tts')return state.userMode==='wife'?'cloudflare':'direct';const mode=networkRouteMode();if(mode!=='auto')return mode;const s=networkStatsRead()?.[feature]||{},last=String(s.lastSuccess||''),at=Number(s.lastSuccessAt)||0;if(['direct','cloudflare'].includes(last)&amp;&amp;Date.now()-at&lt;30*60*1000)return last;return timezoneCloudflareFirst()?'cloudflare':'direct'}
 function networkRecord(feature,path,ok){const all=networkStatsRead(),s=all[feature]&amp;&amp;typeof all[feature]==='object'?all[feature]:{};if(ok){s.lastSuccess=path;s.lastSuccessAt=Date.now();s[path+'FailStreak']=0}else{s[path+'FailStreak']=Math.min(9,(Number(s[path+'FailStreak'])||0)+1)}all[feature]=s;networkStatsWrite(all);updateNetworkRouteUi()}
 function networkRouteLabel(v){return v==='direct'?uiT('직접 우선','ໂດຍກົງກ່ອນ'):v==='cloudflare'?uiT('우회 우선','ທາງອ້ອມກ່ອນ'):uiT('자동','ອັດຕະໂນມັດ')}
-function updateNetworkRouteUi(){const mode=networkRouteMode(),pref=networkPreferred('relay');if(ui.networkRouteSummary)ui.networkRouteSummary.textContent=networkRouteLabel(mode);for(const [id,v] of [['networkModeAuto','auto'],['networkModeDirect','direct'],['networkModeCloudflare','cloudflare']]){const b=$(id);if(b)b.classList.toggle('active',mode===v)}if(ui.networkRouteHint)ui.networkRouteHint.textContent=mode==='auto'?uiT(`자동 선택 · ${pref==='cloudflare'?'우회':'직접'} 연결 우선 · 최근 실제 성공 경로를 반영합니다.`,`ເລືອກອັດຕະໂນມັດ · ${pref==='cloudflare'?'ໃຊ້ທາງອ້ອມກ່ອນ':'ໃຊ້ທາງກົງກ່ອນ'} · ອີງຕາມເສັ້ນທາງທີ່ສຳເລັດຫຼ້າສຸດ`):uiT('선택한 경로를 먼저 사용하고 실패하면 반대 경로로 자동 전환합니다.','ໃຊ້ເສັ້ນທາງທີ່ເລືອກກ່ອນ ແລະຈະສະຫຼັບໄປອີກເສັ້ນທາງອັດຕະໂນມັດຖ້າລົ້ມເຫຼວ')}
+function updateNetworkRouteUi(){
+  if(ui.networkRouteSummary)ui.networkRouteSummary.textContent=uiT('텍스트 Gemini 직접 · 음성 중계','ແປຂໍ້ຄວາມ Gemini ໂດຍກົງ · ສຽງຜ່ານເຊີບເວີ');
+  if(ui.networkRouteHint)ui.networkRouteHint.textContent=uiT('정번역·역번역: Gemini 직접(실패 시 자동 우회 없음). 음성: 남편 Cloud Run · 아내 Cloudflare 우선. 일부 다국어 AI 음성복구는 직접 호출합니다.','ແປແລະແປກັບ: Gemini ໂດຍກົງ (ບໍ່ສະຫຼັບທາງອັດຕະໂນມັດ). ສຽງ: ຜົວ Cloud Run, ເມຍ Cloudflare ກ່ອນ. ບາງການກູ້ຄືນ STT ຫຼາຍພາສາໃຊ້ Gemini ໂດຍກົງ.');
+}
 function setNetworkRouteMode(v){const m=['auto','direct','cloudflare'].includes(String(v))?String(v):'auto';lsSet(NETWORK_ROUTE_MODE_KEY,m);updateNetworkRouteUi()}
 function relayRoutes(path=''){const custom=state.relayUrl&amp;&amp;![SEOUL_RELAY,BANGKOK_RELAY,CLOUDFLARE_RELAY].includes(state.relayUrl)?state.relayUrl:'',feature=networkFeature(path),pref=networkPreferred(feature),cfRegion=timezoneCloudflareFirst()?'bangkok':'seoul',cf={name:'cloudflare-'+cfRegion,base:CLOUDFLARE_RELAY,region:cfRegion,via:'cloudflare',pathKind:'cloudflare'},seoul={name:'seoul',base:SEOUL_RELAY,via:'direct',pathKind:'direct'},bangkok={name:'bangkok',base:BANGKOK_RELAY,via:'direct',pathKind:'direct'},direct=timezoneCloudflareFirst()?[bangkok,seoul]:[seoul,bangkok],arr=pref==='cloudflare'?[cf,...direct]:[...direct,cf];if(custom)arr.unshift({name:'custom',base:custom,via:'direct',pathKind:'direct'});return arr.filter((x,i,a)=&gt;a.findIndex(y=&gt;y.base===x.base&amp;&amp;y.region===x.region)===i)}
 function relayUrl(route,path){const u=new URL(route.base.replace(/\/+$/,'')+path);if(route.via==='cloudflare'&amp;&amp;route.region)u.searchParams.set('region',route.region);return u.toString()}
@@ -1470,7 +1473,7 @@ state.history=readHistory().slice(0,50);syncPersistentToggleStateFromStorage();r
 </textarea>
 <script>
 const GENERAL_VERSION="V3.61.202";
-const GENERAL_BUILD="20261014-V3.61.202-TEST-TEXT-DIRECT-R1";
+const GENERAL_BUILD="20261014-V3.61.202-TEST-ROUTE-UI-R2";
 const GENERAL_DISPLAY_VERSION=GENERAL_VERSION.replace(/\s+TEST$/,'');
 const shellVersionEl=document.getElementById('shellVersion');if(shellVersionEl){const n=shellVersionEl.querySelector('.shell-version-number'),c=shellVersionEl.querySelector('.shell-version-channel');if(n)n.textContent=GENERAL_DISPLAY_VERSION;if(c)c.textContent='TEST';shellVersionEl.setAttribute('data-channel','TEST')}
 // V3.61.200 / G158A: transient-UI reset only; prompt/live-call plumbing unchanged.
