@@ -2,5 +2,5 @@
   "version": "V3.61.202",
   "build": "20261014-V3.61.202-TEST-VOICE-IME-R3",
   "buildId": "20261014-V3.61.202-TEST-VOICE-IME-R3",
-  "notes": "TEST R3 isolated candidate (not Pages main / not SERVICE): Android Google voice keyboard focus return experiment. Recent trusted bulk dictation-like text + next focused input tap or explicit compact keyboard button performs best-effort blur/VirtualKeyboard.hide/focus. No OS IME-switch guarantee. Existing R2 voice relay routing, text Gemini Single Pass, LOW, prompts and storage unchanged. No paid API calls. Real Galaxy/Gboard and Laos device testing PENDING."
+  "notes": "TEST R2+R3 deployed to GitHub Pages TEST main on 2026-10-14 (NOT SERVICE): Android Google voice keyboard focus return experiment. Recent trusted bulk dictation-like text + next focused input tap or explicit compact keyboard button performs best-effort blur/VirtualKeyboard.hide/focus. No OS IME-switch guarantee. Existing R2 voice relay routing, text Gemini Single Pass, LOW, prompts and storage unchanged. No paid API calls. Real Galaxy/Gboard and Laos device testing PENDING."
 }
